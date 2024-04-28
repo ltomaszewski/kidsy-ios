@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct IntroView: View {
-    let headlineText: String
-    let submitText: String
-    let alreadyHaveAnAccountText: String
-    var onStartForFree: () -> Void  // Closure for handling tap action
-    var onLogin: () -> Void  // Closure for handling tap action
-
+    let state: IntroViewNavigationStackState
+    
     var body: some View {
         VStack {
             Spacer()
@@ -26,7 +22,7 @@ struct IntroView: View {
                 .background(Circle().fill(Color.blue.opacity(0.3)))
                 .overlay(Circle().stroke(Color.gray, lineWidth: 2))
             
-            Text(headlineText)
+            Text(state.headlineText)
                 .font(.system(size: 24))
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
@@ -34,15 +30,15 @@ struct IntroView: View {
             Spacer()
 
             // Start for free button
-            BlackButton(title: submitText,
-                        action: onStartForFree)
+            BlackButton(title: state.submitText,
+                        action: state.onStartForFree)
             .padding(.bottom)
             
             // Login button
             Button(action: {
                 // Handle the action here
             }) {
-                Text(alreadyHaveAnAccountText)
+                Text(state.alreadyHaveAnAccountText)
                     .font(.footnote)
                     .foregroundColor(.blue)
             }
@@ -50,9 +46,15 @@ struct IntroView: View {
             
         }
         .background(Color.white) // Assuming a white background
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    IntroView(headlineText: "Science based parent program that adapts to your kid.", submitText: "Start for free", alreadyHaveAnAccountText: "Already have an account? Log in", onStartForFree: {}, onLogin: {})
+    IntroView(state: .init(headlineText: "Science based parent program that adapts to your kid.",
+                    submitText: "Start for free",
+                    alreadyHaveAnAccountText: "Already have an account? Log in",
+                    onStartForFree: {},
+                    onLogin: {})
+    )
 }

@@ -9,34 +9,32 @@ import SwiftUI
 import shared
 
 struct OnboardingView: View {
-    let onboardingScreenState: OnboardingScreenState
-    let onUserAction: (UserAction) -> ()
+    let state: OnboardingViewNavigationStackState
     
     var body: some View {
-        NavigationView {
-            switch onboardingScreenState.currentScreenModel.type {
+        VStack {
+            switch state.onboardingScreenState.currentScreenModel.type {
             case OnboardingScreenType.prompt:
-                OnboardingPromptView(headlineText: onboardingScreenState.currentScreenModel.headline,
-                                     bottomText: onboardingScreenState.currentScreenModel.submitTop ?? "-1") {
-                    onUserAction(OnboardingScreenState.Action(type: .submit, option: nil))
+                OnboardingPromptView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
+                                     bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "-1") {
+                    state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil))
                 }
             case OnboardingScreenType.question:
-                OnboardingQuestionView(question: onboardingScreenState.currentScreenModel.headline,
-                                       options: onboardingScreenState.swiftUIOptions) { selected in
-                    let selectedId = onboardingScreenState.swiftUIOptionIdWith(text: selected)
-                    onUserAction(OnboardingScreenState.Action(type: .submit, option: selectedId))
+                OnboardingQuestionView(question: state.onboardingScreenState.currentScreenModel.headline,
+                                       options: state.onboardingScreenState.swiftUIOptions) { selected in
+                    let selectedId = state.onboardingScreenState.swiftUIOptionIdWith(text: selected)
+                    state.onUserAction(OnboardingScreenState.Action(type: .submit, option: selectedId))
                 }
             case OnboardingScreenType.questionmultiselect:
-                OnboardingQuestionMultiselectView(questionText: onboardingScreenState.currentScreenModel.headline,
-                                                  submitText: onboardingScreenState.currentScreenModel.submit ?? "-1",
-                                                  options: onboardingScreenState.swiftUIOptions,
-                                                  onSelectOption: { _ in
-                    
-                })
+                OnboardingQuestionMultiselectView(questionText: state.onboardingScreenState.currentScreenModel.headline,
+                                                  submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1",
+                                                  options: state.onboardingScreenState.swiftUIOptions,
+                                                  onSelectOption: { _ in })
             default:
                 Text("Unknown screen")
             }
-        }
+        }       
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -54,9 +52,9 @@ extension OnboardingScreenState {
 }
 
 #Preview {
-    OnboardingView(onboardingScreenState: .init(jsonInput: OnboardingScreenState.companion.JSON_INPUT,
-                                                state: .onboarding,
-                                                index: 0,
-                                                selectedOptions: []),
-                   onUserAction: { _ in })
+    OnboardingView(state: .init(onboardingScreenState: .init(jsonInput: OnboardingScreenState.companion.JSON_INPUT,
+                                                             state: .onboarding,
+                                                             index: 0,
+                                                             selectedOptions: []),
+                                onUserAction: { _ in }))
 }
