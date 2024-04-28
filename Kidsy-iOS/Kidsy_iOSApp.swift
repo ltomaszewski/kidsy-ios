@@ -11,7 +11,7 @@ import SwiftUI
 struct Kidsy_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootNavigationView()
         }
     }
 }
