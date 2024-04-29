@@ -19,17 +19,17 @@ struct ToggleGrayButton: View {
             action()
         }) {
             Text(title)
+                 .font(.sfButton())
                  .foregroundColor(.black) // Foreground color set to gray
                  .padding()
                  .frame(maxWidth: .infinity) // Ensures the button takes the full width
-                 .background(.gray) // Background color can be adjusted if needed
+                 .background(Color(red: 0.949, green: 0.949, blue: 0.949)) // Background color can be adjusted if needed
                  .overlay(
                      RoundedRectangle(cornerRadius: 10)
-                         .stroke(isSelected ? Color.black : Color.clear, lineWidth: 2) // Conditional border
+                         .stroke(isSelected ? Color.black : Color.clear, lineWidth: 4) // Conditional border
                  )
                  .cornerRadius(10)
-                 .animation(.easeInOut, value: isSelected) // Smooth transition for border appearance
-
+                 .animation(.linear, value: isSelected) // Smooth transition for border appearance
         }
     }
 }

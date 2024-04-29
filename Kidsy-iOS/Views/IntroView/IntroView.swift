@@ -11,41 +11,43 @@ struct IntroView: View {
     let state: IntroViewNavigationStackState
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            // Illustration
-            Image("kido_him") // Replace "kido_him" with your actual image name
+        ZStack {
+            Image("background_question_blue")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 200, height: 200)
-                .background(Circle().fill(Color.blue.opacity(0.3)))
-                .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-            
-            Text(state.headlineText)
-                .font(.system(size: 24))
-                .foregroundColor(.black)
-                .multilineTextAlignment(.center)
-                .padding()
-            Spacer()
+            VStack {
+                Spacer()
+                // Illustration
+                Image("kido_him") // Replace "kido_him" with your actual image name
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                
+                Text(state.headlineText)
+                    .font(.sfTitle())
+                    .lineSpacing(10)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(.minimum(64, 48))
+                
+                Spacer()
 
-            // Start for free button
-            BlackButton(title: state.submitText,
-                        action: state.onStartForFree)
-            .padding(.bottom)
-            
-            // Login button
-            Button(action: {
-                // Handle the action here
-            }) {
-                Text(state.alreadyHaveAnAccountText)
-                    .font(.footnote)
-                    .foregroundColor(.blue)
+                // Start for free button
+                BlackButton(title: state.submitText,
+                            action: state.onStartForFree)
+                .padding(.bottom)
+                
+                // Login button
+                Button(action: {
+                    // Handle the action here
+                }) {
+                    Text(state.alreadyHaveAnAccountText)
+                        .font(.footnote)
+                        .foregroundColor(.blue)
+                }
+                .padding(.bottom, 20)
+                
             }
-            .padding(.bottom, 20)
-            
+            .padding(.horizontal)
         }
-        .background(Color.white) // Assuming a white background
         .navigationBarBackButtonHidden(true)
     }
 }

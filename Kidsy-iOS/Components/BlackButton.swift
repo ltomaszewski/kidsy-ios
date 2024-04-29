@@ -14,13 +14,13 @@ struct BlackButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 21))
+                .font(.sfButton())
                 .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.black))
+                .frame(maxWidth: .infinity) // Ensures the button takes the full width
+                .background(.black) // Background color can be adjusted if needed
+                .cornerRadius(10)
         }
-        .padding(.horizontal)
     }
 }
 

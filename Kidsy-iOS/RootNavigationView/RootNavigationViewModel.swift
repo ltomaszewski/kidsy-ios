@@ -11,13 +11,11 @@ import shared
 
 final class RootNavigationViewModel: ObservableObject {
     @Published var path = NavigationPath()
-    @Published var screenState: ScreenState = IntroScreenState(state: .start)
     private let appStateManager = KidsyStateManager()
     private var screenStateObserver: Closeable?
     
     init() {
         screenStateObserver = appStateManager.screenState.watch { [weak self] screenState in
-            self?.screenState = screenState
             self?.show(screenState)
         }
     }

@@ -16,7 +16,7 @@ struct OnboardingQuestionView: View {
         VStack {
             Spacer()
             Text(question)
-                .font(.title)
+                .font(.sfTitle())
                 .multilineTextAlignment(.center)
                 .padding()
             
@@ -25,13 +25,9 @@ struct OnboardingQuestionView: View {
                 BlackButton(title: option) {
                     onSelectOption(option)
                 }
-                .padding(.bottom, 8) // Add some spacing between buttons
             }
-            
             Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white) // Change background color if needed
     }
 }
 

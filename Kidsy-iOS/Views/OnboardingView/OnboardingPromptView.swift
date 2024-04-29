@@ -26,13 +26,15 @@ struct OnboardingPromptView: View {
                 .padding(.bottom)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white) // Change background color if needed
         .onTapGesture {
             self.onTap()  // Call the provided closure when the tap is detected
         }
     }
+    
 }
 
 #Preview {
-    OnboardingPromptView(headlineText: "Answer a few questions to start personalizing your experience.", bottomText: "Tap anywhere to continue", onTap: {})
+    OnboardingPromptView(headlineText: "Answer a few questions to start personalizing your experience.",
+                         bottomText: "Tap anywhere to continue",
+                         onTap: {})
 }

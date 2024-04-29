@@ -12,6 +12,7 @@ struct OnboardingQuestionMultiselectView: View {
     let submitText: String
     let options: [String]
     let onSelectOption: ([String]) -> ()
+    let onSubmitOption: ([String]) -> ()
     
     @State private var selectedOptions: Set<String> = [] // Track selected options using a Set
     
@@ -19,7 +20,7 @@ struct OnboardingQuestionMultiselectView: View {
         VStack {
             Spacer()
             Text(questionText)
-                .font(.title)
+                .font(.sfTitle())
                 .multilineTextAlignment(.center)
                 .padding()
             
@@ -38,20 +39,20 @@ struct OnboardingQuestionMultiselectView: View {
             
             Spacer()
             // Conditionally display the black button only if selectedOptions is not empty
-            if !selectedOptions.isEmpty {
                 BlackButton(title: submitText) {
-                    onSelectOption(Array(selectedOptions)) // Pass the selected options when tapped
+                    onSubmitOption(Array(selectedOptions)) // Pass the selected options when tapped
                 }
+                .opacity(selectedOptions.isEmpty ? 0.0 : 1.0)
+                .animation(.easeInOut(duration: 0.3), value: selectedOptions.isEmpty) // Animate opacity change
                 .padding(.bottom)
-            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white)
     }
 }
 
 #Preview {
     OnboardingQuestionMultiselectView(questionText: "Question 1",
                                       submitText: "Submit Text",
-                                      options: ["A", "B", "C"], onSelectOption: { _ in })
+                                      options: ["A", "B", "C"],
+                                      onSelectOption: { _ in },
+                                      onSubmitOption: { _ in })
 }

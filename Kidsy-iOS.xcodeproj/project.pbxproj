@@ -27,6 +27,7 @@
 		6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */; };
 		6D9049552BDE72520095D302 /* IntroViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049542BDE72520095D302 /* IntroViewNavigationStackState.swift */; };
 		6D9049582BDE727E0095D302 /* NavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049572BDE727E0095D302 /* NavigationStackState.swift */; };
+		6DDD45D62BE00FA4000ABAB1 /* SFFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD45D52BE00FA4000ABAB1 /* SFFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D9049542BDE72520095D302 /* IntroViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D9049572BDE727E0095D302 /* NavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackState.swift; sourceTree = "<group>"; };
+		6DDD45D52BE00FA4000ABAB1 /* SFFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		6D00A0972BDD7E9800CC7DB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6DDD45D42BE00F8C000ABAB1 /* Style */,
 				6D00A0A52BDD802600CC7DB9 /* OnboardingView */,
 				6D00A0A22BDD800B00CC7DB9 /* IntroView */,
 			);
@@ -233,6 +236,14 @@
 				6D9049572BDE727E0095D302 /* NavigationStackState.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6DDD45D42BE00F8C000ABAB1 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				6DDD45D52BE00FA4000ABAB1 /* SFFont.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				6D00A0B02BDD891E00CC7DB9 /* ToggleGrayButton.swift in Sources */,
 				6D00A0A92BDD819F00CC7DB9 /* OnboardingPromptView.swift in Sources */,
 				6D00A0B42BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift in Sources */,
+				6DDD45D62BE00FA4000ABAB1 /* SFFont.swift in Sources */,
 				6D00A06E2BDD7DFF00CC7DB9 /* Kidsy_iOSApp.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
 				6D00A0B62BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift in Sources */,
