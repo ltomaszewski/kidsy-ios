@@ -10,17 +10,25 @@ import shared
 
 struct RootNavigationView: View {
     @StateObject var viewModel = RootNavigationViewModel()
-
+    
     var body: some View {
-        NavigationStack(path: $viewModel.path) {
+        ZStack {
+            Image(viewModel.backgroundImageNaem)
+                .resizable()
+                .ignoresSafeArea(.all, edges: .top)
             VStack {
-                Text("Root")
-            }
-            .navigationDestination(for: IntroViewNavigationStackState.self) { state in
-                IntroView(state: state)
-            }
-            .navigationDestination(for: OnboardingViewNavigationStackState.self) { state in
-                OnboardingView(state: state)
+                Text("Parent")
+                NavigationStack(path: $viewModel.path) {
+                    VStack {
+                        Text("Root")
+                    }
+                    .navigationDestination(for: IntroViewNavigationStackState.self) { state in
+                        IntroView(state: state)
+                    }
+                    .navigationDestination(for: OnboardingViewNavigationStackState.self) { state in
+                        OnboardingView(state: state)
+                    }
+                }
             }
         }
     }

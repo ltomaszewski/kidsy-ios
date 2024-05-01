@@ -13,6 +13,7 @@ struct OnboardingViewNavigationStackState : NavigationStackState {
         lhs.onboardingScreenState.index == rhs.onboardingScreenState.index
     }
     
+    let backgroundImageName: String = "background_question_green"
     let onboardingScreenState: OnboardingScreenState
     let onUserAction: (UserAction) -> ()
     

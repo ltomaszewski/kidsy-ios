@@ -13,7 +13,7 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            Image("background_question_green")
+            Image(state.backgroundImageName)
                 .resizable()
             VStack {
                 switch state.onboardingScreenState.currentScreenModel.type {
@@ -44,8 +44,8 @@ struct OnboardingView: View {
                     Text("Unknown screen")
                 }
             }
-            .padding(.horizontal)
         }
+        .padding(.horizontal)
         .navigationBarBackButtonHidden(true)
     }
 }

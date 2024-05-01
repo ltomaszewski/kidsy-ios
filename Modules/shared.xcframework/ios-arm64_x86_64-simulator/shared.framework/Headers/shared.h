@@ -207,19 +207,21 @@ __attribute__((swift_name("OnboardingOption.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingScreenModel")))
 @interface SharedOnboardingScreenModel : SharedBase
-- (instancetype)initWithType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit __attribute__((swift_name("init(type:id:headline:headlineTop:headlineBottom:options:submitTop:submit:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("init(type:id:headline:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedOnboardingScreenModelCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingScreenModel *)doCopyType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit __attribute__((swift_name("doCopy(type:id:headline:headlineTop:headlineBottom:options:submitTop:submit:)")));
+- (SharedOnboardingScreenModel *)doCopyType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("doCopy(type:id:headline:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *headline __attribute__((swift_name("headline")));
 @property (readonly) NSString * _Nullable headlineBottom __attribute__((swift_name("headlineBottom")));
+@property (readonly) NSString * _Nullable headlineBottomImageName __attribute__((swift_name("headlineBottomImageName")));
 @property (readonly) NSString * _Nullable headlineTop __attribute__((swift_name("headlineTop")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSArray<SharedOnboardingOption *> *options __attribute__((swift_name("options")));
 @property (readonly) NSString * _Nullable submit __attribute__((swift_name("submit")));
 @property (readonly) NSString * _Nullable submitTop __attribute__((swift_name("submitTop")));
+@property (readonly) NSString * _Nullable textInputPlaceholder __attribute__((swift_name("textInputPlaceholder")));
 @property (readonly) SharedOnboardingScreenType *type __attribute__((swift_name("type")));
 @end
 
@@ -265,9 +267,11 @@ __attribute__((swift_name("OnboardingScreenType")))
 @property (class, readonly, getter=companion) SharedOnboardingScreenTypeCompanion *companion __attribute__((swift_name("companion")));
 @property (class, readonly) SharedOnboardingScreenType *question __attribute__((swift_name("question")));
 @property (class, readonly) SharedOnboardingScreenType *questionmultiselect __attribute__((swift_name("questionmultiselect")));
+@property (class, readonly) SharedOnboardingScreenType *textinput __attribute__((swift_name("textinput")));
+@property (class, readonly) SharedOnboardingScreenType *timeinput __attribute__((swift_name("timeinput")));
 @property (class, readonly) SharedOnboardingScreenType *prompt __attribute__((swift_name("prompt")));
+@property (class, readonly) SharedOnboardingScreenType *promptwithdescriptionpoints __attribute__((swift_name("promptwithdescriptionpoints")));
 @property (class, readonly) SharedOnboardingScreenType *askfornotification __attribute__((swift_name("askfornotification")));
-@property (class, readonly) SharedOnboardingScreenType *reminder __attribute__((swift_name("reminder")));
 + (SharedKotlinArray<SharedOnboardingScreenType *> *)values __attribute__((swift_name("values()")));
 @property (class, readonly) NSArray<SharedOnboardingScreenType *> *entries __attribute__((swift_name("entries")));
 @end
@@ -396,8 +400,10 @@ __attribute__((swift_name("IntroScreenState")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *alreadyHaveAnAccount __attribute__((swift_name("alreadyHaveAnAccount")));
+@property (readonly) NSString *alreadyHaveAnAccountBolt __attribute__((swift_name("alreadyHaveAnAccountBolt")));
 @property (readonly) NSString *backgroundColor __attribute__((swift_name("backgroundColor")));
 @property (readonly) NSString *headline __attribute__((swift_name("headline")));
+@property (readonly) NSString *headlineBolt __attribute__((swift_name("headlineBolt")));
 @property (readonly) NSString *imageName __attribute__((swift_name("imageName")));
 @property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
 @property (readonly) NSString *startForFree __attribute__((swift_name("startForFree")));
@@ -492,6 +498,7 @@ __attribute__((swift_name("OnboardingScreenState")))
 @property (readonly) SharedOnboardingModel *onboarding __attribute__((swift_name("onboarding")));
 @property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
 @property (readonly) NSArray<SharedOnboardingOption *> *selectedOptions __attribute__((swift_name("selectedOptions")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
 @property (readonly) SharedOnboardingScreenStateState *state __attribute__((swift_name("state")));
 @end
 

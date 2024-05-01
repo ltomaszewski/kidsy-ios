@@ -12,8 +12,9 @@ struct IntroView: View {
     
     var body: some View {
         ZStack {
-            Image("background_question_blue")
+            Image(state.backgroundImageName)
                 .resizable()
+                .ignoresSafeArea(.all, edges: .top)
             VStack {
                 Spacer()
                 // Illustration
@@ -54,9 +55,9 @@ struct IntroView: View {
 
 #Preview {
     IntroView(state: .init(headlineText: "Science based parent program that adapts to your kid.",
-                    submitText: "Start for free",
-                    alreadyHaveAnAccountText: "Already have an account? Log in",
-                    onStartForFree: {},
-                    onLogin: {})
+                           submitText: "Start for free",
+                           alreadyHaveAnAccountText: "Already have an account? Log in",
+                           onStartForFree: {},
+                           onLogin: {})
     )
 }

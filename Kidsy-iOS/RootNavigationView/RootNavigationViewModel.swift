@@ -10,11 +10,13 @@ import SwiftUI
 import shared
 
 final class RootNavigationViewModel: ObservableObject {
+    @Published var backgroundImageNaem: String
     @Published var path = NavigationPath()
     private let appStateManager = KidsyStateManager()
     private var screenStateObserver: Closeable?
     
     init() {
+        backgroundImageNaem = "background_question_blue"
         screenStateObserver = appStateManager.screenState.watch { [weak self] screenState in
             self?.show(screenState)
         }
@@ -36,10 +38,12 @@ final class RootNavigationViewModel: ObservableObject {
                                                                           alreadyHaveAnAccountText: introState.alreadyHaveAnAccount,
                                                                           onStartForFree: { [weak self] in self?.executeUserAction(userAction: IntroScreenState.Action.startForFree) },
                                                                           onLogin: { [weak self] in self?.executeUserAction(userAction: IntroScreenState.Action.logIn) })
+            backgroundImageNaem = introNavigationStackState.backgroundImageName
             path.append(introNavigationStackState)
         case let onboardingState as OnboardingScreenState:
             let onboardingNavigationStackState = OnboardingViewNavigationStackState(onboardingScreenState: onboardingState,
                                                                                     onUserAction:  { [weak self] in self?.executeUserAction(userAction: $0) })
+            backgroundImageNaem = onboardingNavigationStackState.backgroundImageName
             path.append(onboardingNavigationStackState)
         default:
             break;

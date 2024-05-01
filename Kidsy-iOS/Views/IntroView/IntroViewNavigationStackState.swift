@@ -12,6 +12,7 @@ struct IntroViewNavigationStackState : NavigationStackState {
         lhs.headlineText == rhs.headlineText
     }
     
+    let backgroundImageName: String = "background_question_blue"
     let headlineText: String
     let submitText: String
     let alreadyHaveAnAccountText: String
