@@ -44,8 +44,9 @@ struct OnboardingView: View {
                     Text("Unknown screen")
                 }
             }
+            .padding(.horizontal)
+
         }
-        .padding(.horizontal)
         .navigationBarBackButtonHidden(true)
     }
 }

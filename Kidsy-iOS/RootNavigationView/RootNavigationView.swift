@@ -17,7 +17,12 @@ struct RootNavigationView: View {
                 .resizable()
                 .ignoresSafeArea(.all, edges: .top)
             VStack {
-                Text("Parent")
+                if (viewModel.progress != -1) {
+                    ProgressBar(value: viewModel.progress)
+                        .frame(height: 5)
+                        .padding(.top)
+                        .padding(.horizontal)
+                }
                 NavigationStack(path: $viewModel.path) {
                     VStack {
                         Text("Root")

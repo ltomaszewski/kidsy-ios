@@ -12,6 +12,7 @@ import shared
 final class RootNavigationViewModel: ObservableObject {
     @Published var backgroundImageNaem: String
     @Published var path = NavigationPath()
+    @Published var progress: Float = -1.0
     private let appStateManager = KidsyStateManager()
     private var screenStateObserver: Closeable?
     
@@ -45,6 +46,7 @@ final class RootNavigationViewModel: ObservableObject {
                                                                                     onUserAction:  { [weak self] in self?.executeUserAction(userAction: $0) })
             backgroundImageNaem = onboardingNavigationStackState.backgroundImageName
             path.append(onboardingNavigationStackState)
+            self.progress = Float(onboardingState.index)/Float(onboardingState.size)
         default:
             break;
         }
