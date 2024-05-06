@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateAction, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedProcessingScreenStateState, SharedProcessingScreenState, SharedProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingScreenStateActionCompanion, SharedOnboardingScreenStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateAction, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedProcessingScreenStateState, SharedProcessingScreenState, SharedProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
 @protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedPlatform, SharedUserAction, SharedScreenState, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedCloseable, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -505,20 +505,10 @@ __attribute__((swift_name("OnboardingScreenState")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingScreenState.Action")))
 @interface SharedOnboardingScreenStateAction : SharedBase <SharedUserAction>
-- (instancetype)initWithType:(SharedOnboardingScreenStateActionType *)type option:(SharedInt * _Nullable)option __attribute__((swift_name("init(type:option:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedOnboardingScreenStateActionCompanion *companion __attribute__((swift_name("companion")));
+- (instancetype)initWithType:(SharedOnboardingScreenStateActionType *)type option:(SharedInt * _Nullable)option text:(NSString * _Nullable)text __attribute__((swift_name("init(type:option:text:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) SharedInt * _Nullable option __attribute__((swift_name("option")));
+@property (readonly) NSString * _Nullable text __attribute__((swift_name("text")));
 @property (readonly) SharedOnboardingScreenStateActionType *type __attribute__((swift_name("type")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingScreenState.ActionCompanion")))
-@interface SharedOnboardingScreenStateActionCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedOnboardingScreenStateActionCompanion *shared __attribute__((swift_name("shared")));
-- (SharedOnboardingScreenStateAction *)createType:(SharedOnboardingScreenStateActionType *)type option:(SharedInt * _Nullable)option __attribute__((swift_name("create(type:option:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -529,6 +519,7 @@ __attribute__((swift_name("OnboardingScreenState.ActionType")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) SharedOnboardingScreenStateActionType *submit __attribute__((swift_name("submit")));
 @property (class, readonly) SharedOnboardingScreenStateActionType *select __attribute__((swift_name("select")));
+@property (class, readonly) SharedOnboardingScreenStateActionType *textInput __attribute__((swift_name("textInput")));
 + (SharedKotlinArray<SharedOnboardingScreenStateActionType *> *)values __attribute__((swift_name("values()")));
 @property (class, readonly) NSArray<SharedOnboardingScreenStateActionType *> *entries __attribute__((swift_name("entries")));
 @end

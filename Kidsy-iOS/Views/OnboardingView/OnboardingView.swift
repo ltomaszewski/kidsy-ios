@@ -20,13 +20,13 @@ struct OnboardingView: View {
                 case OnboardingScreenType.prompt:
                     OnboardingPromptView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                          bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "-1") {
-                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil))
+                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
                 case OnboardingScreenType.question:
                     OnboardingQuestionView(question: state.onboardingScreenState.currentScreenModel.headline,
                                            options: state.onboardingScreenState.swiftUIOptions) { selected in
                         let selectedId = state.onboardingScreenState.swiftUIOptionIdWith(text: selected)
-                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: selectedId))
+                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: selectedId, text: nil))
                     }
                 case OnboardingScreenType.questionmultiselect:
                     OnboardingQuestionMultiselectView(questionText: state.onboardingScreenState.currentScreenModel.headline,
@@ -36,12 +36,19 @@ struct OnboardingView: View {
                                                       onSubmitOption: { options in
                         for option in options {
                             let selectedId = state.onboardingScreenState.swiftUIOptionIdWith(text: option)
-                            state.onUserAction(OnboardingScreenState.Action(type: .select, option: selectedId))
+                            state.onUserAction(OnboardingScreenState.Action(type: .select, option: selectedId, text: nil))
                         }
-                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil))
+                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     })
+                case OnboardingScreenType.timeinput:
+                    OnboardingTextInputView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
+                                            placeholderText: state.onboardingScreenState.currentScreenModel.textInputPlaceholder ?? "-1",
+                                            submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") { text in
+                        state.onUserAction(OnboardingScreenState.Action(type: .textInput, option: nil, text: text))
+                    }
+                    
                 default:
-                    Text("Unknown screen")
+                    Text("Unknown screen \(state.onboardingScreenState.currentScreenModel.type)")
                 }
             }
             .padding(.horizontal)
