@@ -40,11 +40,18 @@ struct OnboardingView: View {
                         }
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     })
-                case OnboardingScreenType.timeinput:
+                case OnboardingScreenType.textinput:
                     OnboardingTextInputView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                             placeholderText: state.onboardingScreenState.currentScreenModel.textInputPlaceholder ?? "-1",
                                             submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") { text in
                         state.onUserAction(OnboardingScreenState.Action(type: .textInput, option: nil, text: text))
+                    }
+                case OnboardingScreenType.promptwithdescriptionpoints:
+                    OnboardingPromptWithPointsView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
+                                                   points: state.onboardingScreenState.swiftUIOptionsWithImage,
+                                                   submitTopText: state.onboardingScreenState.currentScreenModel.submitTop ?? "-1",
+                                                   submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") {
+                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
                     
                 default:
@@ -61,6 +68,13 @@ struct OnboardingView: View {
 extension OnboardingScreenState {
     var swiftUIOptions: [String] {
         self.currentScreenModel.options.map { $0.text }
+    }
+    
+    var swiftUIOptionsWithImage: [String : UIImage] {
+        self.currentScreenModel.options.reduce(into: [String: UIImage]()) { (dict, object) in
+            guard let imageName = object.imageName else { return }
+            dict[object.text] = UIImage(named: imageName)
+        }
     }
     
     func swiftUIOptionIdWith(text: String) -> KotlinInt {

@@ -179,13 +179,14 @@ __attribute__((swift_name("OnboardingModel.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingOption")))
 @interface SharedOnboardingOption : SharedBase
-- (instancetype)initWithId:(int32_t)id text:(NSString *)text __attribute__((swift_name("init(id:text:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("init(id:text:imageName:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedOnboardingOptionCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingOption *)doCopyId:(int32_t)id text:(NSString *)text __attribute__((swift_name("doCopy(id:text:)")));
+- (SharedOnboardingOption *)doCopyId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("doCopy(id:text:imageName:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) int32_t id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable imageName __attribute__((swift_name("imageName")));
 @property (readonly) NSString *text __attribute__((swift_name("text")));
 @end
 

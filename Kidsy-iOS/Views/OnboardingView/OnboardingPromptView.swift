@@ -16,16 +16,14 @@ struct OnboardingPromptView: View {
         VStack {
             Spacer()
             Text(headlineText)
-                .font(.title)
+                .font(.sfTitle())
                 .multilineTextAlignment(.center)
-                .padding()
             Spacer()
             Text(bottomText)
-                .font(.subheadline)
-                .foregroundColor(Color(red: 0.4588235294117647, green: 0.4588235294117647, blue: 0.4588235294117647))
-                .padding(.bottom)
+                .font(.sfBottomDescription())
+                .foregroundColor(KidsyColors.mediumGray)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.bottom)
         .onTapGesture {
             self.onTap()  // Call the provided closure when the tap is detected
         }
