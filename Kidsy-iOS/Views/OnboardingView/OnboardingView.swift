@@ -18,8 +18,11 @@ struct OnboardingView: View {
             VStack {
                 switch state.onboardingScreenState.currentScreenModel.type {
                 case OnboardingScreenType.prompt:
-                    OnboardingPromptView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
-                                         bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "-1") {
+                    OnboardingPromptView(headlineTopText: state.onboardingScreenState.currentScreenModel.headlineTop ?? "",
+                                         headlineText: state.onboardingScreenState.currentScreenModel.headline,
+                                         headlineBottomText: state.onboardingScreenState.currentScreenModel.headlineBottom ?? "",
+                                         bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "", 
+                                         submitText: state.onboardingScreenState.currentScreenModel.submit ?? "") {
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
                 case OnboardingScreenType.question:
@@ -59,7 +62,7 @@ struct OnboardingView: View {
                 }
             }
             .padding(.horizontal)
-
+            
         }
         .navigationBarBackButtonHidden(true)
     }

@@ -8,31 +8,64 @@
 import SwiftUI
 
 struct OnboardingPromptView: View {
+    let headlineTopText: String
     let headlineText: String
+    let headlineBottomText: String
     let bottomText: String
-    var onTap: () -> Void  // Closure for handling tap action
+    let submitText: String
+    var onSubmit: () -> Void  // Closure for handling tap action
     
     var body: some View {
         VStack {
             Spacer()
-            Text(headlineText)
-                .font(.sfTitle())
-                .multilineTextAlignment(.center)
+            VStack {
+                if !headlineTopText.isEmpty {
+                    Text(headlineTopText)
+                        .font(.sfBottomDescription())
+                        .foregroundColor(KidsyColors.mediumGray)
+                        .padding(.bottom)
+                }
+
+                Text(headlineText)
+                    .font(.sfTitle())
+                    .multilineTextAlignment(.center)
+                
+                if !headlineBottomText.isEmpty {
+                    Text(headlineBottomText)
+                        .font(.sfBottomDescription())
+                        .foregroundColor(KidsyColors.mediumGray)
+                        .padding(.top)
+                }
+            }
+
             Spacer()
-            Text(bottomText)
-                .font(.sfBottomDescription())
-                .foregroundColor(KidsyColors.mediumGray)
+            if !bottomText.isEmpty {
+                Text(bottomText)
+                    .font(.sfBottomDescription())
+                    .foregroundColor(KidsyColors.mediumGray)
+            }
+            
+            if !submitText.isEmpty {
+                BlackButton(title: submitText) {
+                    self.onSubmit()  // Call the provided closure when the tap is detected
+                }
+            }
         }
         .padding(.bottom)
         .onTapGesture {
-            self.onTap()  // Call the provided closure when the tap is detected
+            if submitText.isEmpty {
+                self.onSubmit()  // Call the provided closure when the tap is detected
+            }
         }
     }
     
 }
 
 #Preview {
-    OnboardingPromptView(headlineText: "Answer a few questions to start personalizing your experience.",
+    OnboardingPromptView(headlineTopText: "Top headline",
+                         headlineText: "Answer a few questions to start personalizing your experience.",
+                         headlineBottomText: "Bootom text",
                          bottomText: "Tap anywhere to continue",
-                         onTap: {})
+                         submitText: "Continue",
+                         onSubmit: {})
 }
