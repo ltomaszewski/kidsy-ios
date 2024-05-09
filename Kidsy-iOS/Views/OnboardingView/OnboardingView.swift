@@ -21,7 +21,8 @@ struct OnboardingView: View {
                     OnboardingPromptView(headlineTopText: state.onboardingScreenState.currentScreenModel.headlineTop ?? "",
                                          headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                          headlineBottomText: state.onboardingScreenState.currentScreenModel.headlineBottom ?? "",
-                                         bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "", 
+                                         headlineBottomTextImageName: "",
+                                         bottomText: state.onboardingScreenState.currentScreenModel.submitTop ?? "",
                                          submitText: state.onboardingScreenState.currentScreenModel.submit ?? "") {
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
@@ -56,7 +57,11 @@ struct OnboardingView: View {
                                                    submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") {
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
-                    
+                case OnboardingScreenType.askfornotification:
+                    OnboardingPushNotificationsPromptView(viewModel: .init(state: state,
+                                                                           onPermissionResponse: { isGranted in
+                        state.onUserAction(OnboardingScreenState.Action(type: .submit, option: 1, text: nil))
+                    }))
                 default:
                     Text("Unknown screen \(state.onboardingScreenState.currentScreenModel.type)")
                 }

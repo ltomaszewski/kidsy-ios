@@ -11,6 +11,7 @@ struct OnboardingPromptView: View {
     let headlineTopText: String
     let headlineText: String
     let headlineBottomText: String
+    let headlineBottomTextImageName: String
     let bottomText: String
     let submitText: String
     var onSubmit: () -> Void  // Closure for handling tap action
@@ -34,6 +35,11 @@ struct OnboardingPromptView: View {
                     Text(headlineBottomText)
                         .font(.sfBottomDescription())
                         .foregroundColor(KidsyColors.mediumGray)
+                        .padding(.top)
+                }
+                
+                if !headlineBottomTextImageName.isEmpty {
+                    Image(headlineBottomTextImageName)
                         .padding(.top)
                 }
             }
@@ -65,6 +71,7 @@ struct OnboardingPromptView: View {
     OnboardingPromptView(headlineTopText: "Top headline",
                          headlineText: "Answer a few questions to start personalizing your experience.",
                          headlineBottomText: "Bootom text",
+                         headlineBottomTextImageName: "notification_cta",
                          bottomText: "Tap anywhere to continue",
                          submitText: "Continue",
                          onSubmit: {})

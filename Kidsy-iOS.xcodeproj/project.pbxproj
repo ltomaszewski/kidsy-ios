@@ -24,6 +24,8 @@
 		6D00A0B22BDD8ACB00CC7DB9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A0B12BDD8ACB00CC7DB9 /* OnboardingView.swift */; };
 		6D00A0B42BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A0B32BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift */; };
 		6D00A0B62BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A0B52BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift */; };
+		6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02CAEA2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift */; };
+		6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */; };
 		6D19A8952BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */; };
 		6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF0E2BE8EF6300B3227C /* ProgressBar.swift */; };
 		6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */; };
@@ -85,6 +87,8 @@
 		6D00A0B12BDD8ACB00CC7DB9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6D00A0B32BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionMultiselectView.swift; sourceTree = "<group>"; };
 		6D00A0B52BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionView.swift; sourceTree = "<group>"; };
+		6D02CAEA2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPushNotificationsPromptView.swift; sourceTree = "<group>"; };
+		6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingPushNotificationsPromptView+ViewModel.swift"; sourceTree = "<group>"; };
 		6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPromptWithPointsView.swift; sourceTree = "<group>"; };
 		6D37AF0E2BE8EF6300B3227C /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextInputView.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 		6D00A0A52BDD802600CC7DB9 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
+				6D02CAE92BECBCC4007BB9AB /* NotificationsPrompt */,
 				6D00A0B12BDD8ACB00CC7DB9 /* OnboardingView.swift */,
 				6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */,
 				6D00A0A82BDD819F00CC7DB9 /* OnboardingPromptView.swift */,
@@ -239,6 +244,15 @@
 				6D00A0AF2BDD891E00CC7DB9 /* ToggleGrayButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		6D02CAE92BECBCC4007BB9AB /* NotificationsPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				6D02CAEA2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift */,
+				6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */,
+			);
+			path = NotificationsPrompt;
 			sourceTree = "<group>";
 		};
 		6D37AF0D2BE8EF4C00B3227C /* Components */ = {
@@ -413,9 +427,11 @@
 				6D00A0A92BDD819F00CC7DB9 /* OnboardingPromptView.swift in Sources */,
 				6D00A0B42BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift in Sources */,
 				6DDD45D62BE00FA4000ABAB1 /* SFFont.swift in Sources */,
+				6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */,
 				6D00A06E2BDD7DFF00CC7DB9 /* Kidsy_iOSApp.swift in Sources */,
 				6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
+				6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */,
 				6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */,
 				6D00A0B62BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift in Sources */,
 				6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */,
