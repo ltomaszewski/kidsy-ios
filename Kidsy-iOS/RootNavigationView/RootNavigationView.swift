@@ -15,7 +15,7 @@ struct RootNavigationView: View {
         ZStack {
             Image(viewModel.backgroundImageNaem)
                 .resizable()
-                .ignoresSafeArea(.all, edges: .top)
+                .ignoresSafeArea(.all)
             VStack {
                 if (viewModel.progress != -1) {
                     ProgressBar(value: viewModel.progress)
@@ -32,6 +32,9 @@ struct RootNavigationView: View {
                     }
                     .navigationDestination(for: OnboardingViewNavigationStackState.self) { state in
                         OnboardingView(state: state)
+                    }
+                    .navigationDestination(for: OnboardingSuccessViewNavigationStackState.self) { state in
+                        OnboardingSuccessView(state: state)
                     }
                 }
             }

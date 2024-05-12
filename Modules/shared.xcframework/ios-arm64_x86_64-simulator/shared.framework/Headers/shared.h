@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateAction, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedProcessingScreenStateState, SharedProcessingScreenState, SharedProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateAction, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedOnboardingProcessingScreenStateState, SharedOnboardingProcessingScreenState, SharedOnboardingProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingSuccessStateState, SharedOnboardingSuccessState, SharedOnboardingSuccessStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
 @protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedPlatform, SharedUserAction, SharedScreenState, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedCloseable, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -319,7 +319,8 @@ __attribute__((swift_name("ScreenName")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) SharedScreenName *intro __attribute__((swift_name("intro")));
 @property (class, readonly) SharedScreenName *onboarding __attribute__((swift_name("onboarding")));
-@property (class, readonly) SharedScreenName *processing __attribute__((swift_name("processing")));
+@property (class, readonly) SharedScreenName *onboardingProcessing __attribute__((swift_name("onboardingProcessing")));
+@property (class, readonly) SharedScreenName *onboardingSuccess __attribute__((swift_name("onboardingSuccess")));
 @property (class, readonly) SharedScreenName *createAnAccount __attribute__((swift_name("createAnAccount")));
 + (SharedKotlinArray<SharedScreenName *> *)values __attribute__((swift_name("values()")));
 @property (class, readonly) NSArray<SharedScreenName *> *entries __attribute__((swift_name("entries")));
@@ -436,50 +437,50 @@ __attribute__((swift_name("IntroScreenState.State")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ProcessingScreenState")))
-@interface SharedProcessingScreenState : SharedBase <SharedScreenState>
-- (instancetype)initWithState:(SharedProcessingScreenStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
-- (SharedProcessingScreenState *)doCopyState:(SharedProcessingScreenStateState *)state __attribute__((swift_name("doCopy(state:)")));
+__attribute__((swift_name("OnboardingProcessingScreenState")))
+@interface SharedOnboardingProcessingScreenState : SharedBase <SharedScreenState>
+- (instancetype)initWithState:(SharedOnboardingProcessingScreenStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
+- (SharedOnboardingProcessingScreenState *)doCopyState:(SharedOnboardingProcessingScreenStateState *)state __attribute__((swift_name("doCopy(state:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (SharedProcessingScreenState *)nextScreen __attribute__((swift_name("nextScreen()")));
+- (SharedOnboardingProcessingScreenState *)nextScreen __attribute__((swift_name("nextScreen()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *createAnAccount __attribute__((swift_name("createAnAccount")));
 @property (readonly) NSString *currentText __attribute__((swift_name("currentText")));
 @property (readonly) NSString *doneText __attribute__((swift_name("doneText")));
 @property (readonly) NSString *prefixText __attribute__((swift_name("prefixText")));
 @property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
-@property (readonly) SharedProcessingScreenStateState *state __attribute__((swift_name("state")));
+@property (readonly) SharedOnboardingProcessingScreenStateState *state __attribute__((swift_name("state")));
 @property (readonly) NSString *text1 __attribute__((swift_name("text1")));
 @property (readonly) NSString *text2 __attribute__((swift_name("text2")));
 @property (readonly) NSString *text3 __attribute__((swift_name("text3")));
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ProcessingScreenState.Action")))
-@interface SharedProcessingScreenStateAction : SharedKotlinEnum<SharedProcessingScreenStateAction *> <SharedUserAction>
+__attribute__((swift_name("OnboardingProcessingScreenState.Action")))
+@interface SharedOnboardingProcessingScreenStateAction : SharedKotlinEnum<SharedOnboardingProcessingScreenStateAction *> <SharedUserAction>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedProcessingScreenStateAction *createAnAccount __attribute__((swift_name("createAnAccount")));
-@property (class, readonly) SharedProcessingScreenStateAction *moveToNextStep __attribute__((swift_name("moveToNextStep")));
-@property (class, readonly) SharedProcessingScreenStateAction *loginIn __attribute__((swift_name("loginIn")));
-+ (SharedKotlinArray<SharedProcessingScreenStateAction *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedProcessingScreenStateAction *> *entries __attribute__((swift_name("entries")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateAction *createAnAccount __attribute__((swift_name("createAnAccount")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateAction *moveToNextStep __attribute__((swift_name("moveToNextStep")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateAction *loginIn __attribute__((swift_name("loginIn")));
++ (SharedKotlinArray<SharedOnboardingProcessingScreenStateAction *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingProcessingScreenStateAction *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ProcessingScreenState.State")))
-@interface SharedProcessingScreenStateState : SharedKotlinEnum<SharedProcessingScreenStateState *>
+__attribute__((swift_name("OnboardingProcessingScreenState.State")))
+@interface SharedOnboardingProcessingScreenStateState : SharedKotlinEnum<SharedOnboardingProcessingScreenStateState *>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedProcessingScreenStateState *text1 __attribute__((swift_name("text1")));
-@property (class, readonly) SharedProcessingScreenStateState *text2 __attribute__((swift_name("text2")));
-@property (class, readonly) SharedProcessingScreenStateState *text3 __attribute__((swift_name("text3")));
-@property (class, readonly) SharedProcessingScreenStateState *done __attribute__((swift_name("done")));
-+ (SharedKotlinArray<SharedProcessingScreenStateState *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedProcessingScreenStateState *> *entries __attribute__((swift_name("entries")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateState *text1 __attribute__((swift_name("text1")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateState *text2 __attribute__((swift_name("text2")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateState *text3 __attribute__((swift_name("text3")));
+@property (class, readonly) SharedOnboardingProcessingScreenStateState *done __attribute__((swift_name("done")));
++ (SharedKotlinArray<SharedOnboardingProcessingScreenStateState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingProcessingScreenStateState *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -545,6 +546,47 @@ __attribute__((swift_name("OnboardingScreenState.State")))
 @property (class, readonly) SharedOnboardingScreenStateState *done __attribute__((swift_name("done")));
 + (SharedKotlinArray<SharedOnboardingScreenStateState *> *)values __attribute__((swift_name("values()")));
 @property (class, readonly) NSArray<SharedOnboardingScreenStateState *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OnboardingSuccessState")))
+@interface SharedOnboardingSuccessState : SharedBase <SharedScreenState>
+- (instancetype)initWithState:(SharedOnboardingSuccessStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
+- (SharedOnboardingSuccessState *)doCopyState:(SharedOnboardingSuccessStateState *)state __attribute__((swift_name("doCopy(state:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *alreadyHaveAnAccount __attribute__((swift_name("alreadyHaveAnAccount")));
+@property (readonly) NSString *alreadyHaveAnAccountBolt __attribute__((swift_name("alreadyHaveAnAccountBolt")));
+@property (readonly) NSString *backgroundColor __attribute__((swift_name("backgroundColor")));
+@property (readonly) NSString *createAnAccount __attribute__((swift_name("createAnAccount")));
+@property (readonly) NSString *headline __attribute__((swift_name("headline")));
+@property (readonly) NSString *imageName __attribute__((swift_name("imageName")));
+@property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
+@property (readonly) SharedOnboardingSuccessStateState *state __attribute__((swift_name("state")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OnboardingSuccessState.Action")))
+@interface SharedOnboardingSuccessStateAction : SharedKotlinEnum<SharedOnboardingSuccessStateAction *> <SharedUserAction>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedOnboardingSuccessStateAction *createAccount __attribute__((swift_name("createAccount")));
+@property (class, readonly) SharedOnboardingSuccessStateAction *logIn __attribute__((swift_name("logIn")));
++ (SharedKotlinArray<SharedOnboardingSuccessStateAction *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingSuccessStateAction *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("OnboardingSuccessState.State")))
+@interface SharedOnboardingSuccessStateState : SharedKotlinEnum<SharedOnboardingSuccessStateState *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedOnboardingSuccessStateState *normal __attribute__((swift_name("normal")));
++ (SharedKotlinArray<SharedOnboardingSuccessStateState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingSuccessStateState *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((swift_name("Kotlinx_coroutines_coreFlow")))

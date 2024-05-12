@@ -47,6 +47,16 @@ final class RootNavigationViewModel: ObservableObject {
             backgroundImageNaem = onboardingNavigationStackState.backgroundImageName
             path.append(onboardingNavigationStackState)
             self.progress = Float(onboardingState.index)/Float(onboardingState.size)
+        case let onboardingSuccessState as OnboardingSuccessState:
+            let onboardingSuccessState = OnboardingSuccessViewNavigationStackState(headlineImageName: onboardingSuccessState.imageName,
+                                                                                   headlineBottomText: onboardingSuccessState.headline,
+                                                                                   submitText: onboardingSuccessState.createAnAccount,
+                                                                                   alreadyHaveAnAccountText: onboardingSuccessState.alreadyHaveAnAccount,
+                                                                                   onCreateAccount: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessState.Action.createAccount) },
+                                                                                   onLogin: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessState.Action.logIn) })
+            backgroundImageNaem = onboardingSuccessState.backgroundImageName
+            path.append(onboardingSuccessState)
+            self.progress = -1
         default:
             break;
         }
