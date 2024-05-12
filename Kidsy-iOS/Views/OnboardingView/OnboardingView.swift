@@ -62,6 +62,10 @@ struct OnboardingView: View {
                                                                            onPermissionResponse: { isGranted in
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: 1, text: nil))
                     }))
+                case OnboardingScreenType.timeinput:
+                    OnboardingTimeInputView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
+                                            datePickerCaptionText: state.onboardingScreenState.currentScreenModel.headlineBottom ?? "",
+                                            submitText: state.onboardingScreenState.currentScreenModel.submit ?? "") { _ in }
                 default:
                     Text("Unknown screen \(state.onboardingScreenState.currentScreenModel.type)")
                 }
