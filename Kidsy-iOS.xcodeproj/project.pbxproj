@@ -29,6 +29,7 @@
 		6D19A8952BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */; };
 		6D3724D52BF10EFF005FEC1C /* OnboardingTimeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D42BF10EFF005FEC1C /* OnboardingTimeInputView.swift */; };
 		6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D72BF117C0005FEC1C /* DateTimePicker.swift */; };
+		6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D92BF11D85005FEC1C /* OnboardingSuccessView.swift */; };
 		6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF0E2BE8EF6300B3227C /* ProgressBar.swift */; };
 		6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */; };
 		6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */; };
@@ -94,6 +95,7 @@
 		6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPromptWithPointsView.swift; sourceTree = "<group>"; };
 		6D3724D42BF10EFF005FEC1C /* OnboardingTimeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTimeInputView.swift; sourceTree = "<group>"; };
 		6D3724D72BF117C0005FEC1C /* DateTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
+		6D3724D92BF11D85005FEC1C /* OnboardingSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessView.swift; sourceTree = "<group>"; };
 		6D37AF0E2BE8EF6300B3227C /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextInputView.swift; sourceTree = "<group>"; };
 		6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewNavigationStackState.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				6D00A0B52BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift */,
 				6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */,
 				6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */,
+				6D3724D92BF11D85005FEC1C /* OnboardingSuccessView.swift */,
 			);
 			path = OnboardingView;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9049582BDE727E0095D302 /* NavigationStackState.swift in Sources */,
+				6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */,
 				6D00A0A12BDD7FA100CC7DB9 /* RootNavigationViewModel.swift in Sources */,
 				6D00A0AE2BDD873A00CC7DB9 /* RootNavigationView.swift in Sources */,
 				6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */,
