@@ -34,6 +34,18 @@
 		6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */; };
 		6D42A2F52BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A2F42BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift */; };
 		6D42A2F82BF7A1480071343F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A2F72BF7A1480071343F /* CreateAccountView.swift */; };
+		6D46C6CB2BFA73E400269CBE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46C6CA2BFA73E400269CBE /* WidgetKit.framework */; };
+		6D46C6CD2BFA73E400269CBE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46C6CC2BFA73E400269CBE /* SwiftUI.framework */; };
+		6D46C6D02BFA73E400269CBE /* sleep_trackerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6CF2BFA73E400269CBE /* sleep_trackerBundle.swift */; };
+		6D46C6D22BFA73E400269CBE /* sleep_trackerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6D12BFA73E400269CBE /* sleep_trackerLiveActivity.swift */; };
+		6D46C6D42BFA73E400269CBE /* sleep_tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6D32BFA73E400269CBE /* sleep_tracker.swift */; };
+		6D46C6D62BFA73E400269CBE /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6D52BFA73E400269CBE /* AppIntent.swift */; };
+		6D46C6D82BFA73E500269CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D46C6D72BFA73E500269CBE /* Assets.xcassets */; };
+		6D46C6DC2BFA73E500269CBE /* sleep-trackerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D46C6C92BFA73E400269CBE /* sleep-trackerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6D46C6E22BFA7A2200269CBE /* StartSleepSessionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6E12BFA7A2200269CBE /* StartSleepSessionIntent.swift */; };
+		6D46C6E42BFA817A00269CBE /* SleepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6E32BFA817A00269CBE /* SleepManager.swift */; };
+		6D46C6E52BFA823100269CBE /* SleepManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6E32BFA817A00269CBE /* SleepManager.swift */; };
+		6D46C6E62BFA889300269CBE /* StartSleepSessionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D46C6E12BFA7A2200269CBE /* StartSleepSessionIntent.swift */; };
 		6D8EE7ED2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */; };
 		6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */; };
 		6D9049552BDE72520095D302 /* IntroViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049542BDE72520095D302 /* IntroViewNavigationStackState.swift */; };
@@ -57,6 +69,13 @@
 			remoteGlobalIDString = 6D00A0692BDD7DFF00CC7DB9;
 			remoteInfo = "Kidsy-iOS";
 		};
+		6D46C6DA2BFA73E500269CBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D00A0622BDD7DFF00CC7DB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D46C6C82BFA73E400269CBE;
+			remoteInfo = "sleep-trackerExtension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +88,17 @@
 				6D00A09B2BDD7ED800CC7DB9 /* shared.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D46C6DD2BFA73E500269CBE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6D46C6DC2BFA73E500269CBE /* sleep-trackerExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -103,6 +133,17 @@
 		6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextInputView.swift; sourceTree = "<group>"; };
 		6D42A2F42BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D42A2F72BF7A1480071343F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		6D46C6C92BFA73E400269CBE /* sleep-trackerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sleep-trackerExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D46C6CA2BFA73E400269CBE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6D46C6CC2BFA73E400269CBE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6D46C6CF2BFA73E400269CBE /* sleep_trackerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleep_trackerBundle.swift; sourceTree = "<group>"; };
+		6D46C6D12BFA73E400269CBE /* sleep_trackerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleep_trackerLiveActivity.swift; sourceTree = "<group>"; };
+		6D46C6D32BFA73E400269CBE /* sleep_tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleep_tracker.swift; sourceTree = "<group>"; };
+		6D46C6D52BFA73E400269CBE /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		6D46C6D72BFA73E500269CBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D46C6D92BFA73E500269CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D46C6E12BFA7A2200269CBE /* StartSleepSessionIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSleepSessionIntent.swift; sourceTree = "<group>"; };
+		6D46C6E32BFA817A00269CBE /* SleepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepManager.swift; sourceTree = "<group>"; };
 		6D7BB90D2BF7A5CD00DD254A /* Kidsy-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kidsy-iOS.entitlements"; sourceTree = "<group>"; };
 		6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewNavigationStackState.swift; sourceTree = "<group>"; };
@@ -135,6 +176,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6D46C6C62BFA73E400269CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D46C6CD2BFA73E400269CBE /* SwiftUI.framework in Frameworks */,
+				6D46C6CB2BFA73E400269CBE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,6 +194,7 @@
 				6D00A06C2BDD7DFF00CC7DB9 /* Kidsy-iOS */,
 				6D00A07D2BDD7E0100CC7DB9 /* Kidsy-iOSTests */,
 				6D00A0872BDD7E0100CC7DB9 /* Kidsy-iOSUITests */,
+				6D46C6CE2BFA73E400269CBE /* sleep-tracker */,
 				6D00A06B2BDD7DFF00CC7DB9 /* Products */,
 				6D00A0982BDD7ED800CC7DB9 /* Frameworks */,
 			);
@@ -155,6 +206,7 @@
 				6D00A06A2BDD7DFF00CC7DB9 /* Kidsy-iOS.app */,
 				6D00A07A2BDD7E0100CC7DB9 /* Kidsy-iOSTests.xctest */,
 				6D00A0842BDD7E0100CC7DB9 /* Kidsy-iOSUITests.xctest */,
+				6D46C6C92BFA73E400269CBE /* sleep-trackerExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				6D00A0992BDD7ED800CC7DB9 /* shared.xcframework */,
+				6D46C6CA2BFA73E400269CBE /* WidgetKit.framework */,
+				6D46C6CC2BFA73E400269CBE /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +313,8 @@
 			children = (
 				6D00A0AB2BDD849A00CC7DB9 /* BlackButton.swift */,
 				6D00A0AF2BDD891E00CC7DB9 /* ToggleGrayButton.swift */,
+				6D46C6E12BFA7A2200269CBE /* StartSleepSessionIntent.swift */,
+				6D46C6E32BFA817A00269CBE /* SleepManager.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,6 +354,19 @@
 			path = CreateAccountView;
 			sourceTree = "<group>";
 		};
+		6D46C6CE2BFA73E400269CBE /* sleep-tracker */ = {
+			isa = PBXGroup;
+			children = (
+				6D46C6CF2BFA73E400269CBE /* sleep_trackerBundle.swift */,
+				6D46C6D12BFA73E400269CBE /* sleep_trackerLiveActivity.swift */,
+				6D46C6D32BFA73E400269CBE /* sleep_tracker.swift */,
+				6D46C6D52BFA73E400269CBE /* AppIntent.swift */,
+				6D46C6D72BFA73E500269CBE /* Assets.xcassets */,
+				6D46C6D92BFA73E500269CBE /* Info.plist */,
+			);
+			path = "sleep-tracker";
+			sourceTree = "<group>";
+		};
 		6D8EE7EB2BF1314600CFDE63 /* OnboardingSuccessView */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,10 +403,12 @@
 				6D00A0672BDD7DFF00CC7DB9 /* Frameworks */,
 				6D00A0682BDD7DFF00CC7DB9 /* Resources */,
 				6D00A09C2BDD7ED800CC7DB9 /* Embed Frameworks */,
+				6D46C6DD2BFA73E500269CBE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6D46C6DB2BFA73E500269CBE /* PBXTargetDependency */,
 			);
 			name = "Kidsy-iOS";
 			packageProductDependencies = (
@@ -383,6 +454,23 @@
 			productReference = 6D00A0842BDD7E0100CC7DB9 /* Kidsy-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6D46C6C82BFA73E400269CBE /* sleep-trackerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D46C6E02BFA73E500269CBE /* Build configuration list for PBXNativeTarget "sleep-trackerExtension" */;
+			buildPhases = (
+				6D46C6C52BFA73E400269CBE /* Sources */,
+				6D46C6C62BFA73E400269CBE /* Frameworks */,
+				6D46C6C72BFA73E400269CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sleep-trackerExtension";
+			productName = "sleep-trackerExtension";
+			productReference = 6D46C6C92BFA73E400269CBE /* sleep-trackerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,7 +478,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					6D00A0692BDD7DFF00CC7DB9 = {
@@ -403,6 +491,9 @@
 					6D00A0832BDD7E0100CC7DB9 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 6D00A0692BDD7DFF00CC7DB9;
+					};
+					6D46C6C82BFA73E400269CBE = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -425,6 +516,7 @@
 				6D00A0692BDD7DFF00CC7DB9 /* Kidsy-iOS */,
 				6D00A0792BDD7E0100CC7DB9 /* Kidsy-iOSTests */,
 				6D00A0832BDD7E0100CC7DB9 /* Kidsy-iOSUITests */,
+				6D46C6C82BFA73E400269CBE /* sleep-trackerExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -453,6 +545,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6D46C6C72BFA73E400269CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D46C6D82BFA73E500269CBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -464,6 +564,7 @@
 				6D8EE7ED2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift in Sources */,
 				6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */,
 				6D00A0A12BDD7FA100CC7DB9 /* RootNavigationViewModel.swift in Sources */,
+				6D46C6E42BFA817A00269CBE /* SleepManager.swift in Sources */,
 				6D00A0AE2BDD873A00CC7DB9 /* RootNavigationView.swift in Sources */,
 				6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */,
 				6D42A2F52BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift in Sources */,
@@ -479,6 +580,7 @@
 				6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */,
 				6D00A06E2BDD7DFF00CC7DB9 /* Kidsy_iOSApp.swift in Sources */,
 				6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */,
+				6D46C6E22BFA7A2200269CBE /* StartSleepSessionIntent.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
 				6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */,
 				6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */,
@@ -505,6 +607,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6D46C6C52BFA73E400269CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D46C6D02BFA73E400269CBE /* sleep_trackerBundle.swift in Sources */,
+				6D46C6D62BFA73E400269CBE /* AppIntent.swift in Sources */,
+				6D46C6D42BFA73E400269CBE /* sleep_tracker.swift in Sources */,
+				6D46C6D22BFA73E400269CBE /* sleep_trackerLiveActivity.swift in Sources */,
+				6D46C6E52BFA823100269CBE /* SleepManager.swift in Sources */,
+				6D46C6E62BFA889300269CBE /* StartSleepSessionIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -517,6 +632,11 @@
 			isa = PBXTargetDependency;
 			target = 6D00A0692BDD7DFF00CC7DB9 /* Kidsy-iOS */;
 			targetProxy = 6D00A0852BDD7E0100CC7DB9 /* PBXContainerItemProxy */;
+		};
+		6D46C6DB2BFA73E500269CBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D46C6C82BFA73E400269CBE /* sleep-trackerExtension */;
+			targetProxy = 6D46C6DA2BFA73E500269CBE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -643,6 +763,7 @@
 		6D00A08F2BDD7E0100CC7DB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Kidsy-iOS/Kidsy-iOS.entitlements";
@@ -679,6 +800,7 @@
 		6D00A0902BDD7E0100CC7DB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Kidsy-iOS/Kidsy-iOS.entitlements";
@@ -788,6 +910,64 @@
 			};
 			name = Release;
 		};
+		6D46C6DE2BFA73E500269CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DRU4XTX272;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sleep-tracker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "sleep-tracker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.growgenie.Kidsy-iOS.sleep-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D46C6DF2BFA73E500269CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DRU4XTX272;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sleep-tracker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "sleep-tracker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.growgenie.Kidsy-iOS.sleep-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -823,6 +1003,15 @@
 			buildConfigurations = (
 				6D00A0952BDD7E0100CC7DB9 /* Debug */,
 				6D00A0962BDD7E0100CC7DB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D46C6E02BFA73E500269CBE /* Build configuration list for PBXNativeTarget "sleep-trackerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D46C6DE2BFA73E500269CBE /* Debug */,
+				6D46C6DF2BFA73E500269CBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
