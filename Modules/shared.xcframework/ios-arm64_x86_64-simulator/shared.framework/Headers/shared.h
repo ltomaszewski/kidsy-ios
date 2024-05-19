@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateAction, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedOnboardingProcessingScreenStateState, SharedOnboardingProcessingScreenState, SharedOnboardingProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingSuccessStateState, SharedOnboardingSuccessState, SharedOnboardingSuccessStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateActionType, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedOnboardingProcessingScreenStateState, SharedOnboardingProcessingScreenState, SharedOnboardingProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingSuccessStateState, SharedOnboardingSuccessState, SharedOnboardingSuccessStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
 @protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedPlatform, SharedUserAction, SharedScreenState, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedCloseable, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
@@ -356,14 +356,24 @@ __attribute__((swift_name("CreateAnAccountScreenState")))
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CreateAnAccountScreenState.Action")))
-@interface SharedCreateAnAccountScreenStateAction : SharedKotlinEnum<SharedCreateAnAccountScreenStateAction *> <SharedUserAction>
+@interface SharedCreateAnAccountScreenStateAction : SharedBase <SharedUserAction>
+- (instancetype)initWithType:(SharedCreateAnAccountScreenStateActionType *)type socialMedia:(SharedCreateAnAccountScreenStateSocialLoginAction *)socialMedia userIdentifier:(NSString * _Nullable)userIdentifier fullName:(NSString * _Nullable)fullName email:(NSString * _Nullable)email __attribute__((swift_name("init(type:socialMedia:userIdentifier:fullName:email:)"))) __attribute__((objc_designated_initializer));
+@property (readonly) NSString * _Nullable email __attribute__((swift_name("email")));
+@property (readonly) NSString * _Nullable fullName __attribute__((swift_name("fullName")));
+@property (readonly) SharedCreateAnAccountScreenStateSocialLoginAction *socialMedia __attribute__((swift_name("socialMedia")));
+@property (readonly) SharedCreateAnAccountScreenStateActionType *type __attribute__((swift_name("type")));
+@property (readonly) NSString * _Nullable userIdentifier __attribute__((swift_name("userIdentifier")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("CreateAnAccountScreenState.ActionType")))
+@interface SharedCreateAnAccountScreenStateActionType : SharedKotlinEnum<SharedCreateAnAccountScreenStateActionType *>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedCreateAnAccountScreenStateAction *socialLogin __attribute__((swift_name("socialLogin")));
-@property (class, readonly) SharedCreateAnAccountScreenStateAction *email __attribute__((swift_name("email")));
-+ (SharedKotlinArray<SharedCreateAnAccountScreenStateAction *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedCreateAnAccountScreenStateAction *> *entries __attribute__((swift_name("entries")));
+@property (class, readonly) SharedCreateAnAccountScreenStateActionType *loggedin __attribute__((swift_name("loggedin")));
++ (SharedKotlinArray<SharedCreateAnAccountScreenStateActionType *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedCreateAnAccountScreenStateActionType *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((objc_subclassing_restricted))

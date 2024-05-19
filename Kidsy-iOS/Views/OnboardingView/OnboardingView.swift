@@ -73,7 +73,6 @@ struct OnboardingView: View {
                 }
             }
             .padding(.horizontal)
-            
         }
         .navigationBarBackButtonHidden(true)
     }

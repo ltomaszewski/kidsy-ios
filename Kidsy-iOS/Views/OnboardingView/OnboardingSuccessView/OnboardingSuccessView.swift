@@ -14,7 +14,7 @@ struct OnboardingSuccessView: View {
         ZStack {
             Image(state.backgroundImageName)
                 .resizable()
-                .ignoresSafeArea(.all)
+                .ignoresSafeArea(.all, edges: .top)
             VStack {
                 Spacer()
                 VStack {

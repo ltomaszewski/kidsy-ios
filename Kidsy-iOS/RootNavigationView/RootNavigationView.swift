@@ -36,6 +36,9 @@ struct RootNavigationView: View {
                     .navigationDestination(for: OnboardingSuccessViewNavigationStackState.self) { state in
                         OnboardingSuccessView(state: state)
                     }
+                    .navigationDestination(for: CreateAccountViewNavigationStackState.self) { state in
+                        CreateAccountView(state: state)
+                    }
                 }
             }
         }

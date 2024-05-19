@@ -57,6 +57,13 @@ final class RootNavigationViewModel: ObservableObject {
             backgroundImageNaem = onboardingSuccessState.backgroundImageName
             path.append(onboardingSuccessState)
             self.progress = -1
+        case let createAccountViewState as CreateAnAccountScreenState:
+            let createAccountState = CreateAccountViewNavigationStackState(bottomText: createAccountViewState.bottomDescription) { [weak self] userIdentifier, fullName, email in
+                self?.executeUserAction(userAction: CreateAnAccountScreenState.Action(type: .loggedin, socialMedia: .apple, userIdentifier: userIdentifier, fullName: fullName, email: email))
+            }
+            backgroundImageNaem = createAccountState.backgroundImageName
+            path.append(createAccountState)
+//            self.progress = -1
         default:
             break;
         }
