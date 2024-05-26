@@ -20,6 +20,9 @@ extension Font {
     public static func sfTitle() -> Font {
         .custom("SF Pro Display", fixedSize: 24)
     }
+    public static func sfTitleBigger() -> Font {
+        .custom("SF Pro Display", fixedSize: 36)
+    }
     public static func sfTextInput() -> Font {
         .custom("SF Pro Display", fixedSize: 64)
     }

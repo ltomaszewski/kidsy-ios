@@ -36,6 +36,11 @@
 		6D42A2F82BF7A1480071343F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A2F72BF7A1480071343F /* CreateAccountView.swift */; };
 		6D6F7D932C038ABB00716659 /* LetsBeginWithPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D922C038ABB00716659 /* LetsBeginWithPlanView.swift */; };
 		6D6F7D952C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */; };
+		6D6F7D982C039E7C00716659 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D972C039E7C00716659 /* PlanView.swift */; };
+		6D6F7D9A2C039F4100716659 /* PlanViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D992C039F4100716659 /* PlanViewNavigationStackState.swift */; };
+		6D6F7D9D2C03A01900716659 /* PlanStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D9C2C03A01900716659 /* PlanStartView.swift */; };
+		6D6F7D9F2C03A39000716659 /* PlanPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D9E2C03A39000716659 /* PlanPromptView.swift */; };
+		6D6F7DA12C03A41C00716659 /* PlanQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7DA02C03A41C00716659 /* PlanQuestionView.swift */; };
 		6D8EE7ED2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */; };
 		6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */; };
 		6D9049552BDE72520095D302 /* IntroViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049542BDE72520095D302 /* IntroViewNavigationStackState.swift */; };
@@ -107,6 +112,11 @@
 		6D42A2F72BF7A1480071343F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		6D6F7D922C038ABB00716659 /* LetsBeginWithPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsBeginWithPlanView.swift; sourceTree = "<group>"; };
 		6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsBeginWithPlanViewNavigationStackState.swift; sourceTree = "<group>"; };
+		6D6F7D972C039E7C00716659 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		6D6F7D992C039F4100716659 /* PlanViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewNavigationStackState.swift; sourceTree = "<group>"; };
+		6D6F7D9C2C03A01900716659 /* PlanStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanStartView.swift; sourceTree = "<group>"; };
+		6D6F7D9E2C03A39000716659 /* PlanPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanPromptView.swift; sourceTree = "<group>"; };
+		6D6F7DA02C03A41C00716659 /* PlanQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanQuestionView.swift; sourceTree = "<group>"; };
 		6D7BB90D2BF7A5CD00DD254A /* Kidsy-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kidsy-iOS.entitlements"; sourceTree = "<group>"; };
 		6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewNavigationStackState.swift; sourceTree = "<group>"; };
@@ -206,6 +216,7 @@
 		6D00A0972BDD7E9800CC7DB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D6F7D962C039E7300716659 /* PlanView */,
 				6D6F7D912C038AA400716659 /* LetsBeginWithPlanView */,
 				6D42A2F62BF7A0D00071343F /* CreateAccountView */,
 				6D37AF0D2BE8EF4C00B3227C /* Components */,
@@ -310,6 +321,26 @@
 				6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */,
 			);
 			path = LetsBeginWithPlanView;
+			sourceTree = "<group>";
+		};
+		6D6F7D962C039E7300716659 /* PlanView */ = {
+			isa = PBXGroup;
+			children = (
+				6D6F7D9B2C03A00400716659 /* SubViews */,
+				6D6F7D972C039E7C00716659 /* PlanView.swift */,
+				6D6F7D992C039F4100716659 /* PlanViewNavigationStackState.swift */,
+			);
+			path = PlanView;
+			sourceTree = "<group>";
+		};
+		6D6F7D9B2C03A00400716659 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D6F7D9C2C03A01900716659 /* PlanStartView.swift */,
+				6D6F7D9E2C03A39000716659 /* PlanPromptView.swift */,
+				6D6F7DA02C03A41C00716659 /* PlanQuestionView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		6D8EE7EB2BF1314600CFDE63 /* OnboardingSuccessView */ = {
@@ -479,6 +510,7 @@
 				6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */,
 				6D00A0A12BDD7FA100CC7DB9 /* RootNavigationViewModel.swift in Sources */,
 				6D00A0AE2BDD873A00CC7DB9 /* RootNavigationView.swift in Sources */,
+				6D6F7D9A2C039F4100716659 /* PlanViewNavigationStackState.swift in Sources */,
 				6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */,
 				6D42A2F52BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift in Sources */,
 				6D00A0B22BDD8ACB00CC7DB9 /* OnboardingView.swift in Sources */,
@@ -488,12 +520,16 @@
 				6D19A8952BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift in Sources */,
 				6D00A0A92BDD819F00CC7DB9 /* OnboardingPromptView.swift in Sources */,
 				6D00A0B42BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift in Sources */,
+				6D6F7DA12C03A41C00716659 /* PlanQuestionView.swift in Sources */,
 				6D42A2F82BF7A1480071343F /* CreateAccountView.swift in Sources */,
 				6DDD45D62BE00FA4000ABAB1 /* SFFont.swift in Sources */,
 				6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */,
 				6D6F7D952C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift in Sources */,
 				6D00A06E2BDD7DFF00CC7DB9 /* Kidsy_iOSApp.swift in Sources */,
+				6D6F7D982C039E7C00716659 /* PlanView.swift in Sources */,
+				6D6F7D9F2C03A39000716659 /* PlanPromptView.swift in Sources */,
 				6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */,
+				6D6F7D9D2C03A01900716659 /* PlanStartView.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
 				6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */,
 				6D6F7D932C038ABB00716659 /* LetsBeginWithPlanView.swift in Sources */,
