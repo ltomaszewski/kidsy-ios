@@ -47,13 +47,13 @@ final class RootNavigationViewModel: ObservableObject {
             backgroundImageNaem = onboardingNavigationStackState.backgroundImageName
             path.append(onboardingNavigationStackState)
             self.progress = Float(onboardingState.index)/Float(onboardingState.size)
-        case let onboardingSuccessState as OnboardingSuccessState:
+        case let onboardingSuccessState as OnboardingSuccessScreenState:
             let onboardingSuccessState = OnboardingSuccessViewNavigationStackState(headlineImageName: onboardingSuccessState.imageName,
                                                                                    headlineBottomText: onboardingSuccessState.headline,
                                                                                    submitText: onboardingSuccessState.createAnAccount,
                                                                                    alreadyHaveAnAccountText: onboardingSuccessState.alreadyHaveAnAccount,
-                                                                                   onCreateAccount: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessState.Action.createAccount) },
-                                                                                   onLogin: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessState.Action.logIn) })
+                                                                                   onCreateAccount: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessScreenState.Action.createAccount) },
+                                                                                   onLogin: { [weak self] in self?.executeUserAction(userAction: OnboardingSuccessScreenState.Action.logIn) })
             backgroundImageNaem = onboardingSuccessState.backgroundImageName
             path.append(onboardingSuccessState)
             self.progress = -1
@@ -63,7 +63,22 @@ final class RootNavigationViewModel: ObservableObject {
             }
             backgroundImageNaem = createAccountState.backgroundImageName
             path.append(createAccountState)
-//            self.progress = -1
+        case let letsbeginWithPlanScreenState as LetsBeginWithPlanScreenState:
+            let letsBeginWithPlanViewNavigationStackState = LetsBeginWithPlanViewNavigationStackState(
+                headlineText: letsbeginWithPlanScreenState.header,
+                headlineBottomText: letsbeginWithPlanScreenState.subtitle,
+                programCardTitle: letsbeginWithPlanScreenState.program_card_title,
+                programCardSubTitle: letsbeginWithPlanScreenState.program_card_subTitle,
+                programCardDecorativeGraphic: letsbeginWithPlanScreenState.program_card_decorative_graphic,
+                programCardSubmit: letsbeginWithPlanScreenState.program_card_submit,
+                onBegin: { [weak self] in self?.executeUserAction(userAction: LetsBeginWithPlanScreenState.Action.begin) },
+                onClose: { [weak self] in self?.executeUserAction(userAction: LetsBeginWithPlanScreenState.Action.close) })
+            backgroundImageNaem = letsBeginWithPlanViewNavigationStackState.backgroundImageName
+            self.progress = -1
+            path.append(letsBeginWithPlanViewNavigationStackState)
+        case let planViewState as PlanScreenState:
+            fatalError("Implement Plan state")
+            break;
         default:
             break;
         }

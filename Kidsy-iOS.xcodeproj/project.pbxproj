@@ -34,6 +34,8 @@
 		6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */; };
 		6D42A2F52BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A2F42BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift */; };
 		6D42A2F82BF7A1480071343F /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42A2F72BF7A1480071343F /* CreateAccountView.swift */; };
+		6D6F7D932C038ABB00716659 /* LetsBeginWithPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D922C038ABB00716659 /* LetsBeginWithPlanView.swift */; };
+		6D6F7D952C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */; };
 		6D8EE7ED2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */; };
 		6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */; };
 		6D9049552BDE72520095D302 /* IntroViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9049542BDE72520095D302 /* IntroViewNavigationStackState.swift */; };
@@ -103,6 +105,8 @@
 		6D37AF102BE908E500B3227C /* OnboardingTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextInputView.swift; sourceTree = "<group>"; };
 		6D42A2F42BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D42A2F72BF7A1480071343F /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		6D6F7D922C038ABB00716659 /* LetsBeginWithPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsBeginWithPlanView.swift; sourceTree = "<group>"; };
+		6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsBeginWithPlanViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D7BB90D2BF7A5CD00DD254A /* Kidsy-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Kidsy-iOS.entitlements"; sourceTree = "<group>"; };
 		6D8EE7EC2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessViewNavigationStackState.swift; sourceTree = "<group>"; };
 		6D9049522BDE72260095D302 /* OnboardingViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewNavigationStackState.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		6D00A0972BDD7E9800CC7DB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D6F7D912C038AA400716659 /* LetsBeginWithPlanView */,
 				6D42A2F62BF7A0D00071343F /* CreateAccountView */,
 				6D37AF0D2BE8EF4C00B3227C /* Components */,
 				6DDD45D42BE00F8C000ABAB1 /* Style */,
@@ -296,6 +301,15 @@
 				6D42A2F42BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift */,
 			);
 			path = CreateAccountView;
+			sourceTree = "<group>";
+		};
+		6D6F7D912C038AA400716659 /* LetsBeginWithPlanView */ = {
+			isa = PBXGroup;
+			children = (
+				6D6F7D922C038ABB00716659 /* LetsBeginWithPlanView.swift */,
+				6D6F7D942C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift */,
+			);
+			path = LetsBeginWithPlanView;
 			sourceTree = "<group>";
 		};
 		6D8EE7EB2BF1314600CFDE63 /* OnboardingSuccessView */ = {
@@ -477,10 +491,12 @@
 				6D42A2F82BF7A1480071343F /* CreateAccountView.swift in Sources */,
 				6DDD45D62BE00FA4000ABAB1 /* SFFont.swift in Sources */,
 				6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */,
+				6D6F7D952C038ACC00716659 /* LetsBeginWithPlanViewNavigationStackState.swift in Sources */,
 				6D00A06E2BDD7DFF00CC7DB9 /* Kidsy_iOSApp.swift in Sources */,
 				6D37AF112BE908E500B3227C /* OnboardingTextInputView.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
 				6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */,
+				6D6F7D932C038ABB00716659 /* LetsBeginWithPlanView.swift in Sources */,
 				6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */,
 				6D3724D52BF10EFF005FEC1C /* OnboardingTimeInputView.swift in Sources */,
 				6D00A0B62BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift in Sources */,

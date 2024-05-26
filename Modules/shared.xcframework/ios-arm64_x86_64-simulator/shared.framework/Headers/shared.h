@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedOnboardingScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedOnboardingOptionCompanion, SharedOnboardingOption, SharedOnboardingScreenType, SharedOnboardingScreenModelCompanion, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedOnboardingScreenTypeCompanion, SharedKotlinArray<T>, SharedCStateFlow<T>, SharedScreenName, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateActionType, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedOnboardingProcessingScreenStateState, SharedOnboardingProcessingScreenState, SharedOnboardingProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingSuccessStateState, SharedOnboardingSuccessState, SharedOnboardingSuccessStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
+@class SharedScreenModel, SharedOnboardingModelCompanion, SharedOnboardingModel, SharedCStateFlow<T>, SharedKotlinEnumCompanion, SharedKotlinEnum<E>, SharedScreenName, SharedKotlinArray<T>, SharedCreateAnAccountScreenStateState, SharedCreateAnAccountScreenState, SharedCreateAnAccountScreenStateActionType, SharedCreateAnAccountScreenStateSocialLoginAction, SharedIntroScreenStateState, SharedIntroScreenState, SharedIntroScreenStateAction, SharedPlanModel, SharedLetsBeginWithPlanScreenStateState, SharedLetsBeginWithPlanScreenState, SharedLetsBeginWithPlanScreenStateAction, SharedOptionCompanion, SharedOption, SharedScreenType, SharedScreenModelCompanion, SharedScreenTypeCompanion, SharedOnboardingProcessingScreenStateState, SharedOnboardingProcessingScreenState, SharedOnboardingProcessingScreenStateAction, SharedOnboardingScreenStateState, SharedOnboardingScreenStateCompanion, SharedOnboardingScreenState, SharedOnboardingScreenStateActionType, SharedOnboardingSuccessScreenStateState, SharedOnboardingSuccessScreenState, SharedOnboardingSuccessScreenStateAction, SharedPlanModelCompanion, SharedPlanScreenStateState, SharedPlanScreenState, SharedPlanScreenStateActionType, SharedPlansCompanion, SharedPlanScreenStateAction, SharedKotlinThrowable, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing;
 
-@protocol SharedKotlinx_serialization_coreKSerializer, SharedKotlinComparable, SharedPlatform, SharedUserAction, SharedScreenState, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedCloseable, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
+@protocol SharedKotlinx_serialization_coreKSerializer, SharedPlatform, SharedUserAction, SharedScreenState, SharedKotlinComparable, SharedStateHandler, SharedKotlinx_coroutines_coreFlowCollector, SharedKotlinx_coroutines_coreFlow, SharedKotlinx_coroutines_coreSharedFlow, SharedKotlinx_coroutines_coreStateFlow, SharedCloseable, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -152,13 +152,13 @@ __attribute__((swift_name("KotlinBoolean")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingModel")))
 @interface SharedOnboardingModel : SharedBase
-- (instancetype)initWithScreens:(NSArray<SharedOnboardingScreenModel *> *)screens __attribute__((swift_name("init(screens:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithScreens:(NSArray<SharedScreenModel *> *)screens __attribute__((swift_name("init(screens:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedOnboardingModelCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingModel *)doCopyScreens:(NSArray<SharedOnboardingScreenModel *> *)screens __attribute__((swift_name("doCopy(screens:)")));
+- (SharedOnboardingModel *)doCopyScreens:(NSArray<SharedScreenModel *> *)screens __attribute__((swift_name("doCopy(screens:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<SharedOnboardingScreenModel *> *screens __attribute__((swift_name("screens")));
+@property (readonly) NSArray<SharedScreenModel *> *screens __attribute__((swift_name("screens")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -169,123 +169,6 @@ __attribute__((swift_name("OnboardingModel.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) SharedOnboardingModelCompanion *shared __attribute__((swift_name("shared")));
 - (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingOption")))
-@interface SharedOnboardingOption : SharedBase
-- (instancetype)initWithId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("init(id:text:imageName:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedOnboardingOptionCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingOption *)doCopyId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("doCopy(id:text:imageName:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int32_t id __attribute__((swift_name("id")));
-@property (readonly) NSString * _Nullable imageName __attribute__((swift_name("imageName")));
-@property (readonly) NSString *text __attribute__((swift_name("text")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingOption.Companion")))
-@interface SharedOnboardingOptionCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedOnboardingOptionCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingScreenModel")))
-@interface SharedOnboardingScreenModel : SharedBase
-- (instancetype)initWithType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("init(type:id:headline:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedOnboardingScreenModelCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingScreenModel *)doCopyType:(SharedOnboardingScreenType *)type id:(NSString *)id headline:(NSString *)headline headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOnboardingOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("doCopy(type:id:headline:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *headline __attribute__((swift_name("headline")));
-@property (readonly) NSString * _Nullable headlineBottom __attribute__((swift_name("headlineBottom")));
-@property (readonly) NSString * _Nullable headlineBottomImageName __attribute__((swift_name("headlineBottomImageName")));
-@property (readonly) NSString * _Nullable headlineTop __attribute__((swift_name("headlineTop")));
-@property (readonly) NSString *id __attribute__((swift_name("id")));
-@property (readonly) NSArray<SharedOnboardingOption *> *options __attribute__((swift_name("options")));
-@property (readonly) NSString * _Nullable submit __attribute__((swift_name("submit")));
-@property (readonly) NSString * _Nullable submitTop __attribute__((swift_name("submitTop")));
-@property (readonly) NSString * _Nullable textInputPlaceholder __attribute__((swift_name("textInputPlaceholder")));
-@property (readonly) SharedOnboardingScreenType *type __attribute__((swift_name("type")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingScreenModel.Companion")))
-@interface SharedOnboardingScreenModelCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedOnboardingScreenModelCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-@end
-
-__attribute__((swift_name("KotlinComparable")))
-@protocol SharedKotlinComparable
-@required
-- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end
-
-__attribute__((swift_name("KotlinEnum")))
-@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
-@end
-
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingScreenType")))
-@interface SharedOnboardingScreenType : SharedKotlinEnum<SharedOnboardingScreenType *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly, getter=companion) SharedOnboardingScreenTypeCompanion *companion __attribute__((swift_name("companion")));
-@property (class, readonly) SharedOnboardingScreenType *question __attribute__((swift_name("question")));
-@property (class, readonly) SharedOnboardingScreenType *questionmultiselect __attribute__((swift_name("questionmultiselect")));
-@property (class, readonly) SharedOnboardingScreenType *textinput __attribute__((swift_name("textinput")));
-@property (class, readonly) SharedOnboardingScreenType *timeinput __attribute__((swift_name("timeinput")));
-@property (class, readonly) SharedOnboardingScreenType *prompt __attribute__((swift_name("prompt")));
-@property (class, readonly) SharedOnboardingScreenType *promptwithdescriptionpoints __attribute__((swift_name("promptwithdescriptionpoints")));
-@property (class, readonly) SharedOnboardingScreenType *askfornotification __attribute__((swift_name("askfornotification")));
-+ (SharedKotlinArray<SharedOnboardingScreenType *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedOnboardingScreenType *> *entries __attribute__((swift_name("entries")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingScreenType.Companion")))
-@interface SharedOnboardingScreenTypeCompanion : SharedBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) SharedOnboardingScreenTypeCompanion *shared __attribute__((swift_name("shared")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
-- (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
 @end
 
 __attribute__((swift_name("Platform")))
@@ -311,6 +194,24 @@ __attribute__((swift_name("KidsyStateManager")))
 @property (readonly) SharedCStateFlow<id<SharedScreenState>> *screenState __attribute__((swift_name("screenState")));
 @end
 
+__attribute__((swift_name("KotlinComparable")))
+@protocol SharedKotlinComparable
+@required
+- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
+@end
+
+__attribute__((swift_name("KotlinEnum")))
+@interface SharedKotlinEnum<E> : SharedBase <SharedKotlinComparable>
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedKotlinEnumCompanion *companion __attribute__((swift_name("companion")));
+- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
+@end
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ScreenName")))
 @interface SharedScreenName : SharedKotlinEnum<SharedScreenName *>
@@ -322,6 +223,9 @@ __attribute__((swift_name("ScreenName")))
 @property (class, readonly) SharedScreenName *onboardingProcessing __attribute__((swift_name("onboardingProcessing")));
 @property (class, readonly) SharedScreenName *onboardingSuccess __attribute__((swift_name("onboardingSuccess")));
 @property (class, readonly) SharedScreenName *createAnAccount __attribute__((swift_name("createAnAccount")));
+@property (class, readonly) SharedScreenName *letsBeginWithPlan __attribute__((swift_name("letsBeginWithPlan")));
+@property (class, readonly) SharedScreenName *plan __attribute__((swift_name("plan")));
+@property (class, readonly) SharedScreenName *home __attribute__((swift_name("home")));
 + (SharedKotlinArray<SharedScreenName *> *)values __attribute__((swift_name("values()")));
 @property (class, readonly) NSArray<SharedScreenName *> *entries __attribute__((swift_name("entries")));
 @end
@@ -447,6 +351,149 @@ __attribute__((swift_name("IntroScreenState.State")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LetsBeginWithPlanScreenState")))
+@interface SharedLetsBeginWithPlanScreenState : SharedBase <SharedScreenState>
+- (instancetype)initWithPlan:(SharedPlanModel *)plan state:(SharedLetsBeginWithPlanScreenStateState *)state __attribute__((swift_name("init(plan:state:)"))) __attribute__((objc_designated_initializer));
+- (SharedLetsBeginWithPlanScreenState *)doCopyPlan:(SharedPlanModel *)plan state:(SharedLetsBeginWithPlanScreenStateState *)state __attribute__((swift_name("doCopy(plan:state:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *header __attribute__((swift_name("header")));
+@property (readonly) SharedPlanModel *plan __attribute__((swift_name("plan")));
+@property (readonly) NSString *program_card_decorative_graphic __attribute__((swift_name("program_card_decorative_graphic")));
+@property (readonly) NSString *program_card_subTitle __attribute__((swift_name("program_card_subTitle")));
+@property (readonly) NSString *program_card_submit __attribute__((swift_name("program_card_submit")));
+@property (readonly) NSString *program_card_title __attribute__((swift_name("program_card_title")));
+@property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
+@property (readonly) SharedLetsBeginWithPlanScreenStateState *state __attribute__((swift_name("state")));
+@property (readonly) NSString *subtitle __attribute__((swift_name("subtitle")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LetsBeginWithPlanScreenState.Action")))
+@interface SharedLetsBeginWithPlanScreenStateAction : SharedKotlinEnum<SharedLetsBeginWithPlanScreenStateAction *> <SharedUserAction>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedLetsBeginWithPlanScreenStateAction *begin __attribute__((swift_name("begin")));
+@property (class, readonly) SharedLetsBeginWithPlanScreenStateAction *close __attribute__((swift_name("close")));
++ (SharedKotlinArray<SharedLetsBeginWithPlanScreenStateAction *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedLetsBeginWithPlanScreenStateAction *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LetsBeginWithPlanScreenState.State")))
+@interface SharedLetsBeginWithPlanScreenStateState : SharedKotlinEnum<SharedLetsBeginWithPlanScreenStateState *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedLetsBeginWithPlanScreenStateState *start __attribute__((swift_name("start")));
++ (SharedKotlinArray<SharedLetsBeginWithPlanScreenStateState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedLetsBeginWithPlanScreenStateState *> *entries __attribute__((swift_name("entries")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Option")))
+@interface SharedOption : SharedBase
+- (instancetype)initWithId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("init(id:text:imageName:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedOptionCompanion *companion __attribute__((swift_name("companion")));
+- (SharedOption *)doCopyId:(int32_t)id text:(NSString *)text imageName:(NSString * _Nullable)imageName __attribute__((swift_name("doCopy(id:text:imageName:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable imageName __attribute__((swift_name("imageName")));
+@property (readonly) NSString *text __attribute__((swift_name("text")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Option.Companion")))
+@interface SharedOptionCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedOptionCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ScreenModel")))
+@interface SharedScreenModel : SharedBase
+- (instancetype)initWithType:(SharedScreenType *)type id:(NSString *)id navigationBarTitle:(NSString * _Nullable)navigationBarTitle headline:(NSString *)headline headlineImageName:(NSString * _Nullable)headlineImageName headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("init(type:id:navigationBarTitle:headline:headlineImageName:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedScreenModelCompanion *companion __attribute__((swift_name("companion")));
+- (SharedScreenModel *)doCopyType:(SharedScreenType *)type id:(NSString *)id navigationBarTitle:(NSString * _Nullable)navigationBarTitle headline:(NSString *)headline headlineImageName:(NSString * _Nullable)headlineImageName headlineTop:(NSString * _Nullable)headlineTop headlineBottom:(NSString * _Nullable)headlineBottom headlineBottomImageName:(NSString * _Nullable)headlineBottomImageName options:(NSArray<SharedOption *> *)options submitTop:(NSString * _Nullable)submitTop submit:(NSString * _Nullable)submit textInputPlaceholder:(NSString * _Nullable)textInputPlaceholder __attribute__((swift_name("doCopy(type:id:navigationBarTitle:headline:headlineImageName:headlineTop:headlineBottom:headlineBottomImageName:options:submitTop:submit:textInputPlaceholder:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *headline __attribute__((swift_name("headline")));
+@property (readonly) NSString * _Nullable headlineBottom __attribute__((swift_name("headlineBottom")));
+@property (readonly) NSString * _Nullable headlineBottomImageName __attribute__((swift_name("headlineBottomImageName")));
+@property (readonly) NSString * _Nullable headlineImageName __attribute__((swift_name("headlineImageName")));
+@property (readonly) NSString * _Nullable headlineTop __attribute__((swift_name("headlineTop")));
+@property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) NSString * _Nullable navigationBarTitle __attribute__((swift_name("navigationBarTitle")));
+@property (readonly) NSArray<SharedOption *> *options __attribute__((swift_name("options")));
+@property (readonly) NSString * _Nullable submit __attribute__((swift_name("submit")));
+@property (readonly) NSString * _Nullable submitTop __attribute__((swift_name("submitTop")));
+@property (readonly) NSString * _Nullable textInputPlaceholder __attribute__((swift_name("textInputPlaceholder")));
+@property (readonly) SharedScreenType *type __attribute__((swift_name("type")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ScreenModel.Companion")))
+@interface SharedScreenModelCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedScreenModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ScreenType")))
+@interface SharedScreenType : SharedKotlinEnum<SharedScreenType *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly, getter=companion) SharedScreenTypeCompanion *companion __attribute__((swift_name("companion")));
+@property (class, readonly) SharedScreenType *question __attribute__((swift_name("question")));
+@property (class, readonly) SharedScreenType *questionmultiselect __attribute__((swift_name("questionmultiselect")));
+@property (class, readonly) SharedScreenType *textinput __attribute__((swift_name("textinput")));
+@property (class, readonly) SharedScreenType *timeinput __attribute__((swift_name("timeinput")));
+@property (class, readonly) SharedScreenType *prompt __attribute__((swift_name("prompt")));
+@property (class, readonly) SharedScreenType *promptwithdescriptionpoints __attribute__((swift_name("promptwithdescriptionpoints")));
+@property (class, readonly) SharedScreenType *askfornotification __attribute__((swift_name("askfornotification")));
++ (SharedKotlinArray<SharedScreenType *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedScreenType *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ScreenType.Companion")))
+@interface SharedScreenTypeCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedScreenTypeCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializerTypeParamsSerializers:(SharedKotlinArray<id<SharedKotlinx_serialization_coreKSerializer>> *)typeParamsSerializers __attribute__((swift_name("serializer(typeParamsSerializers:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingProcessingScreenState")))
 @interface SharedOnboardingProcessingScreenState : SharedBase <SharedScreenState>
 - (instancetype)initWithState:(SharedOnboardingProcessingScreenStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
@@ -496,20 +543,20 @@ __attribute__((swift_name("OnboardingProcessingScreenState.State")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OnboardingScreenState")))
 @interface SharedOnboardingScreenState : SharedBase <SharedScreenState>
-- (instancetype)initWithJsonInput:(NSString *)jsonInput state:(SharedOnboardingScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOnboardingOption *> *)selectedOptions __attribute__((swift_name("init(jsonInput:state:index:selectedOptions:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithJsonInput:(NSString *)jsonInput state:(SharedOnboardingScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOption *> *)selectedOptions __attribute__((swift_name("init(jsonInput:state:index:selectedOptions:)"))) __attribute__((objc_designated_initializer));
 @property (class, readonly, getter=companion) SharedOnboardingScreenStateCompanion *companion __attribute__((swift_name("companion")));
-- (SharedOnboardingScreenState *)doCopyJsonInput:(NSString *)jsonInput state:(SharedOnboardingScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOnboardingOption *> *)selectedOptions __attribute__((swift_name("doCopy(jsonInput:state:index:selectedOptions:)")));
+- (SharedOnboardingScreenState *)doCopyJsonInput:(NSString *)jsonInput state:(SharedOnboardingScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOption *> *)selectedOptions __attribute__((swift_name("doCopy(jsonInput:state:index:selectedOptions:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (SharedOnboardingScreenState *)nextScreen __attribute__((swift_name("nextScreen()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 - (SharedOnboardingScreenState *)updateWithSelectedOptionOptionId:(int32_t)optionId __attribute__((swift_name("updateWithSelectedOption(optionId:)")));
-@property (readonly) SharedOnboardingScreenModel *currentScreenModel __attribute__((swift_name("currentScreenModel")));
+@property (readonly) SharedScreenModel *currentScreenModel __attribute__((swift_name("currentScreenModel")));
 @property (readonly) int32_t index __attribute__((swift_name("index")));
 @property (readonly) NSString *jsonInput __attribute__((swift_name("jsonInput")));
 @property (readonly) SharedOnboardingModel *onboarding __attribute__((swift_name("onboarding")));
 @property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
-@property (readonly) NSArray<SharedOnboardingOption *> *selectedOptions __attribute__((swift_name("selectedOptions")));
+@property (readonly) NSArray<SharedOption *> *selectedOptions __attribute__((swift_name("selectedOptions")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
 @property (readonly) SharedOnboardingScreenStateState *state __attribute__((swift_name("state")));
 @end
@@ -559,10 +606,10 @@ __attribute__((swift_name("OnboardingScreenState.State")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingSuccessState")))
-@interface SharedOnboardingSuccessState : SharedBase <SharedScreenState>
-- (instancetype)initWithState:(SharedOnboardingSuccessStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
-- (SharedOnboardingSuccessState *)doCopyState:(SharedOnboardingSuccessStateState *)state __attribute__((swift_name("doCopy(state:)")));
+__attribute__((swift_name("OnboardingSuccessScreenState")))
+@interface SharedOnboardingSuccessScreenState : SharedBase <SharedScreenState>
+- (instancetype)initWithState:(SharedOnboardingSuccessScreenStateState *)state __attribute__((swift_name("init(state:)"))) __attribute__((objc_designated_initializer));
+- (SharedOnboardingSuccessScreenState *)doCopyState:(SharedOnboardingSuccessScreenStateState *)state __attribute__((swift_name("doCopy(state:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -573,30 +620,157 @@ __attribute__((swift_name("OnboardingSuccessState")))
 @property (readonly) NSString *headline __attribute__((swift_name("headline")));
 @property (readonly) NSString *imageName __attribute__((swift_name("imageName")));
 @property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
-@property (readonly) SharedOnboardingSuccessStateState *state __attribute__((swift_name("state")));
+@property (readonly) SharedOnboardingSuccessScreenStateState *state __attribute__((swift_name("state")));
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingSuccessState.Action")))
-@interface SharedOnboardingSuccessStateAction : SharedKotlinEnum<SharedOnboardingSuccessStateAction *> <SharedUserAction>
+__attribute__((swift_name("OnboardingSuccessScreenState.Action")))
+@interface SharedOnboardingSuccessScreenStateAction : SharedKotlinEnum<SharedOnboardingSuccessScreenStateAction *> <SharedUserAction>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedOnboardingSuccessStateAction *createAccount __attribute__((swift_name("createAccount")));
-@property (class, readonly) SharedOnboardingSuccessStateAction *logIn __attribute__((swift_name("logIn")));
-+ (SharedKotlinArray<SharedOnboardingSuccessStateAction *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedOnboardingSuccessStateAction *> *entries __attribute__((swift_name("entries")));
+@property (class, readonly) SharedOnboardingSuccessScreenStateAction *createAccount __attribute__((swift_name("createAccount")));
+@property (class, readonly) SharedOnboardingSuccessScreenStateAction *logIn __attribute__((swift_name("logIn")));
++ (SharedKotlinArray<SharedOnboardingSuccessScreenStateAction *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingSuccessScreenStateAction *> *entries __attribute__((swift_name("entries")));
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("OnboardingSuccessState.State")))
-@interface SharedOnboardingSuccessStateState : SharedKotlinEnum<SharedOnboardingSuccessStateState *>
+__attribute__((swift_name("OnboardingSuccessScreenState.State")))
+@interface SharedOnboardingSuccessScreenStateState : SharedKotlinEnum<SharedOnboardingSuccessScreenStateState *>
 + (instancetype)alloc __attribute__((unavailable));
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) SharedOnboardingSuccessStateState *normal __attribute__((swift_name("normal")));
-+ (SharedKotlinArray<SharedOnboardingSuccessStateState *> *)values __attribute__((swift_name("values()")));
-@property (class, readonly) NSArray<SharedOnboardingSuccessStateState *> *entries __attribute__((swift_name("entries")));
+@property (class, readonly) SharedOnboardingSuccessScreenStateState *normal __attribute__((swift_name("normal")));
++ (SharedKotlinArray<SharedOnboardingSuccessScreenStateState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedOnboardingSuccessScreenStateState *> *entries __attribute__((swift_name("entries")));
+@end
+
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanModel")))
+@interface SharedPlanModel : SharedBase
+- (instancetype)initWithNavigationBarTitle:(NSString * _Nullable)navigationBarTitle headlineImageName:(NSString *)headlineImageName headline:(NSString *)headline headlineBottom:(NSString *)headlineBottom submit:(NSString *)submit screens:(NSArray<SharedScreenModel *> *)screens __attribute__((swift_name("init(navigationBarTitle:headlineImageName:headline:headlineBottom:submit:screens:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) SharedPlanModelCompanion *companion __attribute__((swift_name("companion")));
+- (SharedPlanModel *)doCopyNavigationBarTitle:(NSString * _Nullable)navigationBarTitle headlineImageName:(NSString *)headlineImageName headline:(NSString *)headline headlineBottom:(NSString *)headlineBottom submit:(NSString *)submit screens:(NSArray<SharedScreenModel *> *)screens __attribute__((swift_name("doCopy(navigationBarTitle:headlineImageName:headline:headlineBottom:submit:screens:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *headline __attribute__((swift_name("headline")));
+@property (readonly) NSString *headlineBottom __attribute__((swift_name("headlineBottom")));
+@property (readonly) NSString *headlineImageName __attribute__((swift_name("headlineImageName")));
+@property (readonly) NSString * _Nullable navigationBarTitle __attribute__((swift_name("navigationBarTitle")));
+@property (readonly) NSArray<SharedScreenModel *> *screens __attribute__((swift_name("screens")));
+@property (readonly) NSString *submit __attribute__((swift_name("submit")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanModel.Companion")))
+@interface SharedPlanModelCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedPlanModelCompanion *shared __attribute__((swift_name("shared")));
+- (id<SharedKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanScreenState")))
+@interface SharedPlanScreenState : SharedBase <SharedScreenState>
+- (instancetype)initWithJsonInput:(NSString *)jsonInput state:(SharedPlanScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOption *> *)selectedOptions __attribute__((swift_name("init(jsonInput:state:index:selectedOptions:)"))) __attribute__((objc_designated_initializer));
+- (SharedPlanScreenState *)doCopyJsonInput:(NSString *)jsonInput state:(SharedPlanScreenStateState *)state index:(int32_t)index selectedOptions:(NSArray<SharedOption *> *)selectedOptions __attribute__((swift_name("doCopy(jsonInput:state:index:selectedOptions:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (SharedPlanScreenState *)nextScreen __attribute__((swift_name("nextScreen()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (SharedPlanScreenState *)updateWithSelectedOptionOptionId:(int32_t)optionId __attribute__((swift_name("updateWithSelectedOption(optionId:)")));
+@property (readonly) SharedScreenModel *currentScreen __attribute__((swift_name("currentScreen")));
+@property (readonly) int32_t index __attribute__((swift_name("index")));
+@property (readonly) NSString *jsonInput __attribute__((swift_name("jsonInput")));
+@property (readonly) SharedPlanModel *planModel __attribute__((swift_name("planModel")));
+@property (readonly) SharedScreenName *screenName __attribute__((swift_name("screenName")));
+@property (readonly) NSArray<SharedOption *> *selectedOptions __attribute__((swift_name("selectedOptions")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
+@property (readonly) SharedPlanScreenStateState *state __attribute__((swift_name("state")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanScreenState.Action")))
+@interface SharedPlanScreenStateAction : SharedBase <SharedUserAction>
+- (instancetype)initWithType:(SharedPlanScreenStateActionType *)type option:(SharedInt * _Nullable)option text:(NSString * _Nullable)text __attribute__((swift_name("init(type:option:text:)"))) __attribute__((objc_designated_initializer));
+@property (readonly) SharedInt * _Nullable option __attribute__((swift_name("option")));
+@property (readonly) NSString * _Nullable text __attribute__((swift_name("text")));
+@property (readonly) SharedPlanScreenStateActionType *type __attribute__((swift_name("type")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanScreenState.ActionType")))
+@interface SharedPlanScreenStateActionType : SharedKotlinEnum<SharedPlanScreenStateActionType *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedPlanScreenStateActionType *submit __attribute__((swift_name("submit")));
+@property (class, readonly) SharedPlanScreenStateActionType *select __attribute__((swift_name("select")));
+@property (class, readonly) SharedPlanScreenStateActionType *textInput __attribute__((swift_name("textInput")));
++ (SharedKotlinArray<SharedPlanScreenStateActionType *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedPlanScreenStateActionType *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanScreenState.State")))
+@interface SharedPlanScreenStateState : SharedKotlinEnum<SharedPlanScreenStateState *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) SharedPlanScreenStateState *start __attribute__((swift_name("start")));
+@property (class, readonly) SharedPlanScreenStateState *plan __attribute__((swift_name("plan")));
+@property (class, readonly) SharedPlanScreenStateState *done __attribute__((swift_name("done")));
++ (SharedKotlinArray<SharedPlanScreenStateState *> *)values __attribute__((swift_name("values()")));
+@property (class, readonly) NSArray<SharedPlanScreenStateState *> *entries __attribute__((swift_name("entries")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Plans")))
+@interface SharedPlans : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (class, readonly, getter=companion) SharedPlansCompanion *companion __attribute__((swift_name("companion")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Plans.Companion")))
+@interface SharedPlansCompanion : SharedBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) SharedPlansCompanion *shared __attribute__((swift_name("shared")));
+@property (readonly) NSString *day0 __attribute__((swift_name("day0")));
+@end
+
+__attribute__((swift_name("StateHandler")))
+@protocol SharedStateHandler
+@required
+- (id<SharedScreenState>)handleState:(id<SharedScreenState>)state action:(id<SharedUserAction>)action __attribute__((swift_name("handle(state:action:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LetsBeginWithPlanStateHandler")))
+@interface SharedLetsBeginWithPlanStateHandler : SharedBase <SharedStateHandler>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (id<SharedScreenState>)handleState:(SharedLetsBeginWithPlanScreenState *)state action:(SharedLetsBeginWithPlanScreenStateAction *)action __attribute__((swift_name("handle(state:action:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("PlanScreenStateStateHandler")))
+@interface SharedPlanScreenStateStateHandler : SharedBase <SharedStateHandler>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (id<SharedScreenState>)handleState:(SharedPlanScreenState *)state action:(SharedPlanScreenStateAction *)action __attribute__((swift_name("handle(state:action:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_coroutines_coreFlow")))

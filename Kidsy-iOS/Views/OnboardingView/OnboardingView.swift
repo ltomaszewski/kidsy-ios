@@ -17,7 +17,7 @@ struct OnboardingView: View {
                 .resizable()
             VStack {
                 switch state.onboardingScreenState.currentScreenModel.type {
-                case OnboardingScreenType.prompt:
+                case ScreenType.prompt:
                     OnboardingPromptView(headlineTopText: state.onboardingScreenState.currentScreenModel.headlineTop ?? "",
                                          headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                          headlineBottomText: state.onboardingScreenState.currentScreenModel.headlineBottom ?? "",
@@ -26,13 +26,13 @@ struct OnboardingView: View {
                                          submitText: state.onboardingScreenState.currentScreenModel.submit ?? "") {
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
-                case OnboardingScreenType.question:
+                case ScreenType.question:
                     OnboardingQuestionView(question: state.onboardingScreenState.currentScreenModel.headline,
                                            options: state.onboardingScreenState.swiftUIOptions) { selected in
                         let selectedId = state.onboardingScreenState.swiftUIOptionIdWith(text: selected)
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: selectedId, text: nil))
                     }
-                case OnboardingScreenType.questionmultiselect:
+                case ScreenType.questionmultiselect:
                     OnboardingQuestionMultiselectView(questionText: state.onboardingScreenState.currentScreenModel.headline,
                                                       submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1",
                                                       options: state.onboardingScreenState.swiftUIOptions,
@@ -44,25 +44,25 @@ struct OnboardingView: View {
                         }
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     })
-                case OnboardingScreenType.textinput:
+                case ScreenType.textinput:
                     OnboardingTextInputView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                             placeholderText: state.onboardingScreenState.currentScreenModel.textInputPlaceholder ?? "-1",
                                             submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") { text in
                         state.onUserAction(OnboardingScreenState.Action(type: .textInput, option: nil, text: text))
                     }
-                case OnboardingScreenType.promptwithdescriptionpoints:
+                case ScreenType.promptwithdescriptionpoints:
                     OnboardingPromptWithPointsView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                                    points: state.onboardingScreenState.swiftUIOptionsWithImage,
                                                    submitTopText: state.onboardingScreenState.currentScreenModel.submitTop ?? "-1",
                                                    submitText: state.onboardingScreenState.currentScreenModel.submit ?? "-1") {
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: nil, text: nil))
                     }
-                case OnboardingScreenType.askfornotification:
+                case ScreenType.askfornotification:
                     OnboardingPushNotificationsPromptView(viewModel: .init(state: state,
                                                                            onPermissionResponse: { isGranted in
                         state.onUserAction(OnboardingScreenState.Action(type: .submit, option: 1, text: nil))
                     }))
-                case OnboardingScreenType.timeinput:
+                case ScreenType.timeinput:
                     OnboardingTimeInputView(headlineText: state.onboardingScreenState.currentScreenModel.headline,
                                             datePickerCaptionText: state.onboardingScreenState.currentScreenModel.headlineBottom ?? "",
                                             submitText: state.onboardingScreenState.currentScreenModel.submit ?? "") { date in

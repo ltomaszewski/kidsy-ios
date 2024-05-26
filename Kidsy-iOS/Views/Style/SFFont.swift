@@ -30,6 +30,7 @@ struct KidsyColors {
     public static let mintGreen = Color(hex: "#37C882")   // A vibrant, minty green
     public static let paleGray = Color(hex: "#F2F2F2")   // A very light, almost white gray
     public static let mediumGray = Color(red: 0.4588235294117647, green: 0.4588235294117647, blue: 0.4588235294117647) // A neutral, medium gray
+    public static let softSkyBlue = Color(red: 142/255, green: 150/255, blue: 212/255) // A gentle and airy blue reminiscent of a serene sky
 }
 
 extension Color {
