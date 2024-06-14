@@ -45,7 +45,6 @@ struct PlanStartView: View {
                 self.onSubmit()  // Call the provided closure when the tap is detected
             }
         }
-        .navigationTitle(navigationBarText)
     }
 }
 

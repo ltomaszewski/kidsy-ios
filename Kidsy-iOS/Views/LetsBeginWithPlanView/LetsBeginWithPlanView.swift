@@ -35,8 +35,10 @@ struct LetsBeginWithPlanView: View {
                         .font(.sfBottomDescription())
                         .foregroundColor(KidsyColors.mediumGray)
                         .multilineTextAlignment(.center)
+                        .lineSpacing(4)
                         .padding(.top, 8)
                 }
+                .padding(.horizontal, 32)
                 Spacer(minLength: 24)
                 
                 ZStack {
@@ -51,6 +53,7 @@ struct LetsBeginWithPlanView: View {
                             .font(.sfTitle())
                             .fontWeight(.bold)
                             .foregroundColor(.white)
+                            .padding(.bottom,8)
                         Text(state.programCardSubTitle)
                             .font(.sfBottomDescription())
                             .foregroundColor(.white.opacity(0.7))
@@ -61,7 +64,7 @@ struct LetsBeginWithPlanView: View {
                         Image(state.programCardDecorativeGraphic) // Ensure you have an asset named 'Number3' in your Assets.xcassets
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200)
+                            .frame(width: 250, height: 250)
                         
                         Spacer()
                         

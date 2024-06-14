@@ -10,6 +10,7 @@ import SwiftUI
 struct PlanQuestionView: View {
     let question: String
     let options: [String]
+    let dontKnow: String
     let onSelectOption: (String) -> ()
     let oniDontKnow: () -> ()
     
@@ -42,6 +43,7 @@ struct PlanQuestionView: View {
     PlanQuestionView(
         question: "Select your top priority",
         options: ["Sleep", "Health"],
-        onSelectOption: { _ in }, 
+        dontKnow: "Don't know",
+        onSelectOption: { _ in },
         oniDontKnow: { })
 }

@@ -39,6 +39,12 @@ struct RootNavigationView: View {
                     .navigationDestination(for: CreateAccountViewNavigationStackState.self) { state in
                         CreateAccountView(state: state)
                     }
+                    .navigationDestination(for: LetsBeginWithPlanViewNavigationStackState.self) { state in
+                        LetsBeginWithPlanView(state: state)
+                    }
+                    .navigationDestination(for: PlanViewNavigationStackState.self) { state in
+                        PlanView(state: state)
+                    }
                 }
             }
         }

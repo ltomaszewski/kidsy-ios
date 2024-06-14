@@ -43,7 +43,7 @@ final class RootNavigationViewModel: ObservableObject {
             path.append(introNavigationStackState)
         case let onboardingState as OnboardingScreenState:
             let onboardingNavigationStackState = OnboardingViewNavigationStackState(onboardingScreenState: onboardingState,
-                                                                                    onUserAction:  { [weak self] in self?.executeUserAction(userAction: $0) })
+                                                                                    onUserAction:  { [weak self] in self?.executeUserAction(userAction: $0) } )
             backgroundImageNaem = onboardingNavigationStackState.backgroundImageName
             path.append(onboardingNavigationStackState)
             self.progress = Float(onboardingState.index)/Float(onboardingState.size)
@@ -77,7 +77,11 @@ final class RootNavigationViewModel: ObservableObject {
             self.progress = -1
             path.append(letsBeginWithPlanViewNavigationStackState)
         case let planViewState as PlanScreenState:
-            fatalError("Implement Plan state")
+            let planViewNavigationStackState = PlanViewNavigationStackState(planScreenState: planViewState,
+                                                                            onUserAction: { [weak self] in self?.executeUserAction(userAction: $0) })
+            backgroundImageNaem = planViewNavigationStackState.backgroundImageName
+            path.append(planViewNavigationStackState)
+            self.progress = Float(planViewState.index)/Float(planViewState.size)
             break;
         default:
             break;
