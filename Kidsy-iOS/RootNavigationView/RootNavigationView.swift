@@ -45,6 +45,11 @@ struct RootNavigationView: View {
                     .navigationDestination(for: PlanViewNavigationStackState.self) { state in
                         PlanView(state: state)
                     }
+                    .navigationDestination(for: HomeViewNavigationStackState.self) { state in
+                        HomeView(navigationStackState: $viewModel.homeViewNavigationStackState) { tabIndex in
+                            viewModel.updateTabIndex(index: tabIndex)
+                        }
+                    }
                 }
             }
         }

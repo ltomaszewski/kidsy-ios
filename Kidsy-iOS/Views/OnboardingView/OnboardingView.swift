@@ -99,7 +99,7 @@ extension OnboardingScreenState {
 }
 
 #Preview {
-    OnboardingView(state: .init(onboardingScreenState: .init(jsonInput: OnboardingScreenState.companion.JSON_INPUT,
+    OnboardingView(state: .init(onboardingScreenState: .init(jsonInput: Plans.companion.onboarding,
                                                              state: .onboarding,
                                                              index: 0,
                                                              selectedOptions: []),

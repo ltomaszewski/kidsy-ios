@@ -10,6 +10,8 @@ import SwiftUI
 import shared
 
 final class RootNavigationViewModel: ObservableObject {
+    @Published var homeViewNavigationStackState: HomeViewNavigationStackState = .init(state: .init(state: .today))
+    var hasCreatedHomeView: Bool = false
     @Published var backgroundImageNaem: String
     @Published var path = NavigationPath()
     @Published var progress: Float = -1.0
@@ -18,8 +20,13 @@ final class RootNavigationViewModel: ObservableObject {
     
     init() {
         backgroundImageNaem = "background_question_blue"
-        screenStateObserver = appStateManager.screenState.watch { [weak self] screenState in
-            self?.show(screenState)
+        screenStateObserver = appStateManager.screenState.watch { [weak self] state in
+            switch state {
+            case let homeTabbarState as HomeTabBarScreenState where self?.hasCreatedHomeView == true:
+                self?.homeViewNavigationStackState = .init(state: homeTabbarState)
+            default:
+                self?.show(state)
+            }
         }
     }
     
@@ -82,10 +89,20 @@ final class RootNavigationViewModel: ObservableObject {
             backgroundImageNaem = planViewNavigationStackState.backgroundImageName
             path.append(planViewNavigationStackState)
             self.progress = Float(planViewState.index)/Float(planViewState.size)
-            break;
+        case let homeViewState as HomeTabBarScreenState:
+            let homeViewNavigationStackState = HomeViewNavigationStackState(state: homeViewState)
+            self.homeViewNavigationStackState = homeViewNavigationStackState
+            self.hasCreatedHomeView = true
+            self.progress = -1
+            path.append(homeViewNavigationStackState)
         default:
+            fatalError("Unsupported state \(state)")
             break;
         }
+    }
+    
+    func updateTabIndex(index: Int) {
+        executeUserAction(userAction: HomeTabBarScreenState.Action.init(type: .openTab, newTabBarIndex: Int32(index)))
     }
     
     func popToRoot() {

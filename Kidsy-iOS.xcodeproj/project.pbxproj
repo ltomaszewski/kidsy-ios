@@ -27,6 +27,13 @@
 		6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02CAEA2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift */; };
 		6D02CAED2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */; };
 		6D19A8952BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */; };
+		6D2E46182C3453D500824B9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E46172C3453D500824B9B /* HomeView.swift */; };
+		6D2E461A2C3456AD00824B9B /* HomeViewNavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E46192C3456AD00824B9B /* HomeViewNavigationStackState.swift */; };
+		6D2E461D2C34581000824B9B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E461C2C34581000824B9B /* TodayView.swift */; };
+		6D2E46202C34584000824B9B /* PlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E461F2C34584000824B9B /* PlansView.swift */; };
+		6D2E46222C34584B00824B9B /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E46212C34584B00824B9B /* SingleView.swift */; };
+		6D2E46242C34585700824B9B /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E46232C34585700824B9B /* ScheduleView.swift */; };
+		6D2E46262C34590600824B9B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E46252C34590600824B9B /* ProfileView.swift */; };
 		6D3724D52BF10EFF005FEC1C /* OnboardingTimeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D42BF10EFF005FEC1C /* OnboardingTimeInputView.swift */; };
 		6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D72BF117C0005FEC1C /* DateTimePicker.swift */; };
 		6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3724D92BF11D85005FEC1C /* OnboardingSuccessView.swift */; };
@@ -103,6 +110,13 @@
 		6D02CAEA2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPushNotificationsPromptView.swift; sourceTree = "<group>"; };
 		6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingPushNotificationsPromptView+ViewModel.swift"; sourceTree = "<group>"; };
 		6D19A8942BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPromptWithPointsView.swift; sourceTree = "<group>"; };
+		6D2E46172C3453D500824B9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6D2E46192C3456AD00824B9B /* HomeViewNavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewNavigationStackState.swift; sourceTree = "<group>"; };
+		6D2E461C2C34581000824B9B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		6D2E461F2C34584000824B9B /* PlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansView.swift; sourceTree = "<group>"; };
+		6D2E46212C34584B00824B9B /* SingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
+		6D2E46232C34585700824B9B /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		6D2E46252C34590600824B9B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		6D3724D42BF10EFF005FEC1C /* OnboardingTimeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTimeInputView.swift; sourceTree = "<group>"; };
 		6D3724D72BF117C0005FEC1C /* DateTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
 		6D3724D92BF11D85005FEC1C /* OnboardingSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessView.swift; sourceTree = "<group>"; };
@@ -216,6 +230,7 @@
 		6D00A0972BDD7E9800CC7DB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D2E46162C3453C700824B9B /* HomeView */,
 				6D6F7D962C039E7300716659 /* PlanView */,
 				6D6F7D912C038AA400716659 /* LetsBeginWithPlanView */,
 				6D42A2F62BF7A0D00071343F /* CreateAccountView */,
@@ -286,6 +301,28 @@
 				6D02CAEC2BECC46F007BB9AB /* OnboardingPushNotificationsPromptView+ViewModel.swift */,
 			);
 			path = NotificationsPrompt;
+			sourceTree = "<group>";
+		};
+		6D2E46162C3453C700824B9B /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				6D2E461B2C3457FF00824B9B /* Tabs */,
+				6D2E46172C3453D500824B9B /* HomeView.swift */,
+				6D2E46192C3456AD00824B9B /* HomeViewNavigationStackState.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		6D2E461B2C3457FF00824B9B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				6D2E461C2C34581000824B9B /* TodayView.swift */,
+				6D2E461F2C34584000824B9B /* PlansView.swift */,
+				6D2E46212C34584B00824B9B /* SingleView.swift */,
+				6D2E46232C34585700824B9B /* ScheduleView.swift */,
+				6D2E46252C34590600824B9B /* ProfileView.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		6D3724D62BF117B5005FEC1C /* OnboardingTimeInputView */ = {
@@ -506,18 +543,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D9049582BDE727E0095D302 /* NavigationStackState.swift in Sources */,
+				6D2E46262C34590600824B9B /* ProfileView.swift in Sources */,
 				6D8EE7ED2BF1319100CFDE63 /* OnboardingSuccessViewNavigationStackState.swift in Sources */,
 				6D3724DA2BF11D85005FEC1C /* OnboardingSuccessView.swift in Sources */,
+				6D2E461D2C34581000824B9B /* TodayView.swift in Sources */,
 				6D00A0A12BDD7FA100CC7DB9 /* RootNavigationViewModel.swift in Sources */,
 				6D00A0AE2BDD873A00CC7DB9 /* RootNavigationView.swift in Sources */,
 				6D6F7D9A2C039F4100716659 /* PlanViewNavigationStackState.swift in Sources */,
 				6D3724D82BF117C0005FEC1C /* DateTimePicker.swift in Sources */,
+				6D2E46222C34584B00824B9B /* SingleView.swift in Sources */,
 				6D42A2F52BF7A08A0071343F /* CreateAccountViewNavigationStackState.swift in Sources */,
+				6D2E461A2C3456AD00824B9B /* HomeViewNavigationStackState.swift in Sources */,
 				6D00A0B22BDD8ACB00CC7DB9 /* OnboardingView.swift in Sources */,
 				6D00A0A42BDD801900CC7DB9 /* IntroView.swift in Sources */,
 				6D9049552BDE72520095D302 /* IntroViewNavigationStackState.swift in Sources */,
 				6D00A0B02BDD891E00CC7DB9 /* ToggleGrayButton.swift in Sources */,
 				6D19A8952BE92CAE00274A85 /* OnboardingPromptWithPointsView.swift in Sources */,
+				6D2E46202C34584000824B9B /* PlansView.swift in Sources */,
 				6D00A0A92BDD819F00CC7DB9 /* OnboardingPromptView.swift in Sources */,
 				6D00A0B42BDD8D8500CC7DB9 /* OnboardingQuestionMultiselectView.swift in Sources */,
 				6D6F7DA12C03A41C00716659 /* PlanQuestionView.swift in Sources */,
@@ -532,11 +574,13 @@
 				6D6F7D9D2C03A01900716659 /* PlanStartView.swift in Sources */,
 				6D00A0AC2BDD849A00CC7DB9 /* BlackButton.swift in Sources */,
 				6D02CAEB2BECC270007BB9AB /* OnboardingPushNotificationsPromptView.swift in Sources */,
+				6D2E46182C3453D500824B9B /* HomeView.swift in Sources */,
 				6D6F7D932C038ABB00716659 /* LetsBeginWithPlanView.swift in Sources */,
 				6D37AF0F2BE8EF6300B3227C /* ProgressBar.swift in Sources */,
 				6D3724D52BF10EFF005FEC1C /* OnboardingTimeInputView.swift in Sources */,
 				6D00A0B62BDD8D9F00CC7DB9 /* OnboardingQuestionView.swift in Sources */,
 				6D9049532BDE72260095D302 /* OnboardingViewNavigationStackState.swift in Sources */,
+				6D2E46242C34585700824B9B /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
