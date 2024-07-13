@@ -11,6 +11,14 @@ struct TodayView: View {
     @Binding var navigationStackState: HomeViewNavigationStackState
     
     var body: some View {
-        Text("Today \(navigationStackState.state)")
+        VStack {
+            EndlessCalendarView()
+        }.clipped()
     }
 }
+
+
+#Preview {
+    EndlessCalendarView()
+}
+
